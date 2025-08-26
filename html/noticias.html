@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias - RoboTech IoT</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/noticias.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="bi bi-robot"></i> RoboTech IoT
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-house"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-graph-up"></i> Gráficos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="bi bi-newspaper"></i> Notícias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-play-circle"></i> Vídeos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="display-4 fw-bold mb-3">
+                        <i class="bi bi-newspaper"></i> Notícias de Robótica e IoT
+                    </h1>
+                    <p class="lead">Fique por dentro das últimas novidades do mundo da robótica e Internet das Coisas
+                    </p>
+                    <div class="mt-4">
+                        <span class="badge bg-light text-dark fs-6 me-3">
+                            <i class="bi bi-clock"></i> Atualizado hoje
+                        </span>
+                        <span class="badge bg-light text-dark fs-6">
+                            <i class="bi bi-files"></i> 12 artigos
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container my-5">
+        <div class="row">
+            <!-- Main Content -->
+            <div class="col-lg-8">
+                <!-- Trending News -->
+                <div class="trending-news">
+                    <h3 class="mb-3"><i class="bi bi-fire"></i> Destaque da Semana</h3>
+                    <div class="row align-items-center">
+                        <div class="col-md-8">
+                            <h4>Robot autônomo quebra recorde de velocidade</h4>
+                            <p>Novo protótipo desenvolvido por estudantes alcança 45 km/h em competição internacional de
+                                robótica móvel.</p>
+                            <button class="btn btn-light" onclick="showNewsDetail('trending')">Ler mais <i
+                                    class="bi bi-arrow-right"></i></button>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <i class="bi bi-trophy" style="font-size: 4rem; opacity: 0.7;"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Cards -->
+                <div class="row">
+                    <!-- News 1 -->
+                    <div class="col-12">
+                        <div class="card news-card">
+                            <div class="featured-badge">DESTAQUE</div>
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <div
+                                        style="height: 250px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center;">
+                                        <i class="bi bi-cpu" style="font-size: 4rem; color: white; opacity: 0.8;"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <span class="news-category">IA & ROBÓTICA</span>
+                                            <span class="news-date">25 Ago 2024</span>
+                                        </div>
+                                        <h5 class="card-title">Inteligência Artificial revoluciona robótica industrial
+                                        </h5>
+                                        <p class="card-text">Novas técnicas de machine learning estão permitindo que
+                                            robôs industriais se adaptem automaticamente a diferentes tarefas,
+                                            aumentando a eficiência em 40% nas linhas de produção.</p>
+                                        <button class="btn btn-primary" onclick="showNewsDetail('ai-robotics')">Ler
+                                            artigo completo</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- News 2 -->
+                    <div class="col-md-6">
+                        <div class="card news-card">
+                            <div
+                                style="height: 200px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center;">
+                                <i class="bi bi-house-gear" style="font-size: 3rem; color: white; opacity: 0.8;"></i>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="badge bg-success">IOT</span>
+                                    <span class="news-date">24 Ago 2024</span>
+                                </div>
+                                <h5 class="card-title">Casa inteligente com Arduino e sensores</h5>
+                                <p class="card-text">Projeto educacional ensina estudantes a criar sistemas domóticos
+                                    usando microcontroladores e sensores de baixo custo.</p>
+                                <button class="btn btn-outline-primary" onclick="showNewsDetail('smart-home')">Saiba
+                                    mais</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- News 3 -->
+                    <div class="col-md-6">
+                        <div class="card news-card">
+                            <div
+                                style="height: 200px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); display: flex; align-items: center; justify-content: center;">
+                                <i class="bi bi-robot" style="font-size: 3rem; color: white; opacity: 0.8;"></i>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="badge bg-warning text-dark">EDUCAÇÃO</span>
+                                    <span class="news-date">23 Ago 2024</span>
+                                </div>
+                                <h5 class="card-title">Robótica nas escolas cresce 300%</h5>
+                                <p class="card-text">Estudo mostra aumento significativo no uso da robótica educacional
+                                    como ferramenta de aprendizado em matemática e ciências.</p>
+                                <button class="btn btn-outline-primary" onclick="showNewsDetail('education')">Ler
+                                    mais</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- News 4 -->
+                    <div class="col-md-6">
+                        <div class="card news-card">
+                            <div
+                                style="height: 200px; background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); display: flex; align-items: center; justify-content: center;">
+                                <i class="bi bi-heart-pulse" style="font-size: 3rem; color: white; opacity: 0.8;"></i>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="badge bg-info">SAÚDE</span>
+                                    <span class="news-date">22 Ago 2024</span>
+                                </div>
+                                <h5 class="card-title">Robôs auxiliam em cirurgias complexas</h5>
+                                <p class="card-text">Tecnologia robótica permite procedimentos menos invasivos e maior
+                                    precisão em operações delicadas do coração.</p>
+                                <button class="btn btn-outline-primary" onclick="showNewsDetail('health')">Ver
+                                    detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- News 5 -->
+                    <div class="col-md-6">
+                        <div class="card news-card">
+                            <div
+                                style="height: 200px; background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); display: flex; align-items: center; justify-content: center;">
+                                <i class="bi bi-globe" style="font-size: 3rem; color: #333; opacity: 0.8;"></i>
+                            </div>
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <span class="badge bg-secondary">MEIO AMBIENTE</span>
+                                    <span class="news-date">21 Ago 2024</span>
+                                </div>
+                                <h5 class="card-title">Sensores IoT monitoram poluição</h5>
+                                <p class="card-text">Rede de sensores inteligentes espalhados pela cidade fornece dados
+                                    em tempo real sobre qualidade do ar e poluição sonora.</p>
+                                <button class="btn btn-outline-primary"
+                                    onclick="showNewsDetail('environment')">Explorar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- News 6 -->
+                    <div class="col-12">
+                        <div class="card news-card">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <div
+                                        style="height: 250px; background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); display: flex; align-items: center; justify-content: center;">
+                                        <i class="bi bi-car-front"
+                                            style="font-size: 4rem; color: white; opacity: 0.8;"></i>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <span class="badge bg-dark">AUTOMOBILISMO</span>
+                                            <span class="news-date">20 Ago 2024</span>
+                                        </div>
+                                        <h5 class="card-title">Carros autônomos testam novas rotas urbanas</h5>
+                                        <p class="card-text">Empresas de tecnologia iniciam testes de veículos autônomos
+                                            em ambiente urbano real, com foco na segurança de pedestres e ciclistas. Os
+                                            testes incluem cenários complexos como cruzamentos movimentados e condições
+                                            climáticas adversas.</p>
+                                        <button class="btn btn-primary" onclick="showNewsDetail('autonomous-cars')">Ler
+                                            reportagem</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <!-- Search Box -->
+                <div class="search-box">
+                    <h5 class="mb-3"><i class="bi bi-search"></i> Pesquisar Notícias</h5>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Digite sua pesquisa..." id="searchInput">
+                        <button class="btn btn-primary" onclick="searchNews()">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Categories -->
+                <div class="sidebar-widget">
+                    <h5 class="mb-3"><i class="bi bi-tags"></i> Categorias</h5>
+                    <div class="list-group list-group-flush">
+                        <a href="#"
+                            class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                            onclick="filterByCategory('robotica')">
+                            Robótica
+                            <span class="badge bg-primary rounded-pill">8</span>
+                        </a>
+                        <a href="#"
+                            class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                            onclick="filterByCategory('iot')">
+                            Internet das Coisas
+                            <span class="badge bg-primary rounded-pill">6</span>
+                        </a>
+                        <a href="#"
+                            class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                            onclick="filterByCategory('ia')">
+                            Inteligência Artificial
+                            <span class="badge bg-primary rounded-pill">4</span>
+                        </a>
+                        <a href="#"
+                            class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                            onclick="filterByCategory('educacao')">
+                            Educação
+                            <span class="badge bg-primary rounded-pill">5</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Latest News -->
+                <div class="sidebar-widget">
+                    <h5 class="mb-3"><i class="bi bi-clock-history"></i> Últimas Notícias</h5>
+                    <div class="list-group list-group-flush">
+                        <div class="list-group-item">
+                            <div class="d-flex w-100 justify-content-between">
+                                <small class="text-primary fw-bold">Há 2 horas</small>
+                            </div>
+                            <h6 class="mb-1">Novo sensor de movimento desenvolvido</h6>
+                            <small>Tecnologia permite detecção mais precisa...</small>
+                        </div>
+                        <div class="list-group-item">
+                            <div class="d-flex w-100 justify-content-between">
+                                <small class="text-primary fw-bold">Há 4 horas</small>
+                            </div>
+                            <h6 class="mb-1">Competição de robótica estudantil</h6>
+                            <small>Inscrições abertas até setembro...</small>
+                        </div>
+                        <div class="list-group-item">
+                            <div class="d-flex w-100 justify-content-between">
+                                <small class="text-primary fw-bold">Há 6 horas</small>
+                            </div>
+                            <h6 class="mb-1">Arduino lança nova placa</h6>
+                            <small>Modelo com conectividade WiFi integrada...</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tags Cloud -->
+                <div class="sidebar-widget">
+                    <h5 class="mb-3"><i class="bi bi-cloud"></i> Tags Populares</h5>
+                    <div class="tag-cloud">
+                        <span class="badge bg-primary">Arduino</span>
+                        <span class="badge bg-secondary">Raspberry Pi</span>
+                        <span class="badge bg-success">Sensores</span>
+                        <span class="badge bg-danger">Machine Learning</span>
+                        <span class="badge bg-warning text-dark">Automação</span>
+                        <span class="badge bg-info">Python</span>
+                        <span class="badge bg-dark">Microcontroladores</span>
+                        <span class="badge bg-primary">ESP32</span>
+                        <span class="badge bg-secondary">Bluetooth</span>
+                        <span class="badge bg-success">WiFi</span>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="sidebar-widget bg-primary text-white">
+                    <h5 class="mb-3"><i class="bi bi-envelope"></i> Newsletter</h5>
+                    <p>Receba as últimas notícias de robótica e IoT diretamente no seu email!</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Seu email">
+                        <button class="btn btn-light" onclick="subscribeNewsletter()">
+                            <i class="bi bi-send"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para detalhes das notícias -->
+    <div class="modal fade" id="newsModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">Título da Notícia</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="modalContent">
+                    <!-- Conteúdo será inserido aqui -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Compartilhar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+    <footer class="bg-primary text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="bi bi-robot"></i> RoboTech IoT</h5>
+                    <p>Seu portal de notícias sobre robótica e Internet das Coisas.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Trabalho Escolar - 2024</p>
+                    <small>Desenvolvido com Bootstrap</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/noticias.js"></script>
+</body>
+</html>
