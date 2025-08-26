@@ -3,22 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index - Tandron IoT</title>
+    <title>Tandron IoT</title>
     <link rel="stylesheet" href="../css/index.css">
-    <!-- Bootstrap CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" rel="stylesheet">
-    <!-- Chart.js -->
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.min.js"></script>
     
 </head>
 <body>
-    <!-- Navbar -->
+    <header>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">
-                <i class="bi bi-robot"></i> RoboTech IoT
+                <i class="bi bi-robot"></i> Tandron IoT
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -29,18 +28,27 @@
                         <a class="nav-link" href="#"><i class="bi bi-house"></i> Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#"><i class="bi bi-graph-up"></i> Gráficos</a>
+                        <a class="nav-link active" href="#"><i class="bi bi-play-circle"></i> Vídeos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="bi bi-newspaper"></i> Notícias</a>
+                        <a class="nav-link" href="#"><i class="bi bi-graph-up"></i>Gráficos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="bi bi-play-circle"></i> Vídeos</a>
+                        <a class="nav-link" href="#"><i class="bi bi-newspaper"></i> notícia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-trophy"></i> ranking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-chat-left-text"></i> Contato</a>
                     </li>
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav>  
+    </header>
+
+    <main>
 
     <!-- Hero Section -->
     <section class="hero-section">
@@ -48,399 +56,35 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h1 class="display-4 fw-bold mb-3">
-                        <i class="bi bi-bar-chart-line"></i> Monitoramento de Sensores
+                        <i class="bi bi-bar-chart-line"></i> 
                     </h1>
-                    <p class="lead">Acompanhe em tempo real os dados dos sensores do nosso robô IoT</p>
-                    <div class="mt-4">
-                        <span class="badge bg-success fs-6">
-                            <i class="bi bi-wifi"></i> Sistema Online
-                        </span>
-                        <span class="text-white-50 ms-3 update-time">
-                            Última atualização: <span id="lastUpdate">--:--</span>
-                        </span>
-                    </div>
+                    <p class="lead">A Tandron IoT Robotics é um projeto educacional que promove a aprendizagem prática de robótica e IoT, incentivando
+                         estudantes a desenvolverem habilidades técnicas por meio de projetos com sensores, análise de dados e trabalho em equipe.</p>  
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sensor Cards -->
-    <div class="container my-5">
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="card sensor-card h-100">
-                    <div class="card-body text-center">
-                        <div class="text-danger mb-3">
-                            <i class="bi bi-thermometer-high" style="font-size: 3rem;"></i>
-                        </div>
-                        <h5 class="card-title">Temperatura</h5>
-                        <div class="sensor-value text-danger" id="tempValue">23.5°C</div>
-                        <p class="card-text text-muted">Sensor de temperatura ambiente</p>
-                        <div class="progress" style="height: 8px;">
-                            <div class="progress-bar bg-danger" role="progressbar" style="width: 47%" id="tempProgress"></div>
-                        </div>
-                        <small class="text-muted">Normal: 20-25°C</small>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-md-4 mb-4">
-                <div class="card sensor-card h-100">
-                    <div class="card-body text-center">
-                        <div class="text-primary mb-3">
-                            <i class="bi bi-moisture" style="font-size: 3rem;"></i>
-                        </div>
-                        <h5 class="card-title">Umidade</h5>
-                        <div class="sensor-value text-primary" id="humidityValue">65%</div>
-                        <p class="card-text text-muted">Sensor de umidade do ar</p>
-                        <div class="progress" style="height: 8px;">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: 65%" id="humidityProgress"></div>
-                        </div>
-                        <small class="text-muted">Ideal: 40-70%</small>
-                    </div>
-                </div>
-            </div>
+    </main>
 
-            <div class="col-md-4 mb-4">
-                <div class="card sensor-card h-100">
-                    <div class="card-body text-center">
-                        <div class="text-success mb-3">
-                            <i class="bi bi-speedometer2" style="font-size: 3rem;"></i>
-                        </div>
-                        <h5 class="card-title">Velocidade do Robô</h5>
-                        <div class="sensor-value text-success" id="speedValue">12 cm/s</div>
-                        <p class="card-text text-muted">Velocidade de movimento</p>
-                        <div class="progress" style="height: 8px;">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 60%" id="speedProgress"></div>
-                        </div>
-                        <small class="text-muted">Máx: 20 cm/s</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Charts Section -->
-    <div class="container my-5">
-        <div class="row">
-            <div class="col-lg-6 mb-4">
-                <div class="chart-container">
-                    <h4 class="mb-4"><i class="bi bi-graph-up text-primary"></i> Temperatura e Umidade</h4>
-                    <canvas id="tempHumidityChart" width="400" height="200"></canvas>
-                </div>
-            </div>
-
-            <div class="col-lg-6 mb-4">
-                <div class="chart-container">
-                    <h4 class="mb-4"><i class="bi bi-speedometer text-success"></i> Velocidade do Robô</h4>
-                    <canvas id="speedChart" width="400" height="200"></canvas>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12">
-                <div class="chart-container">
-                    <h4 class="mb-4"><i class="bi bi-bar-chart text-warning"></i> Histórico dos Sensores (24h)</h4>
-                    <canvas id="historicalChart" width="400" height="150"></canvas>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Controls Section -->
-    <div class="container my-5">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <div class="card">
-                    <div class="card-header bg-primary text-white">
-                        <h5 class="mb-0"><i class="bi bi-gear"></i> Controles do Sistema</h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-4 text-center mb-3">
-                                <button class="btn btn-outline-primary btn-lg w-100" onclick="refreshData()">
-                                    <i class="bi bi-arrow-clockwise"></i><br>
-                                    Atualizar Dados
-                                </button>
-                            </div>
-                            <div class="col-md-4 text-center mb-3">
-                                <button class="btn btn-outline-success btn-lg w-100" onclick="startMonitoring()">
-                                    <i class="bi bi-play-circle"></i><br>
-                                    Iniciar Monitoramento
-                                </button>
-                            </div>
-                            <div class="col-md-4 text-center mb-3">
-                                <button class="btn btn-outline-danger btn-lg w-100" onclick="stopMonitoring()">
-                                    <i class="bi bi-stop-circle"></i><br>
-                                    Parar Monitoramento
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="bg-primary text-white py-4 mt-5">
+<footer class="bg-primary text-white py-4 mt-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h5><i class="bi bi-robot"></i> RoboTech IoT</h5>
-                    <p>Sistema de monitoramento inteligente para robótica educacional.</p>
+                    <h5><i class="bi bi-robot"></i>Tandron IoT</h5>
+                    <p>Sistema de monitoramento inteligente para robótica educacional</p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <p class="mb-0">Trabalho Escolar - 2024</p>
-                    <small>Desenvolvido com Bootstrap e Chart.js</small>
+                    <p class="mb-0">Trabalho Escolar - 2025</p>
                 </div>
             </div>
         </div>
-    </footer>
+</footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 
-    <script>
-        // Dados simulados para os gráficos
-        let sensorData = {
-            temperature: [],
-            humidity: [],
-            speed: [],
-            labels: []
-        };
-
-        let monitoringInterval;
-        let isMonitoring = false;
-
-        // Função para gerar dados aleatórios realistas
-        function generateSensorData() {
-            const temp = (Math.random() * 10 + 20).toFixed(1); // 20-30°C
-            const humidity = Math.floor(Math.random() * 30 + 50); // 50-80%
-            const speed = (Math.random() * 15 + 5).toFixed(1); // 5-20 cm/s
-            
-            return { temp, humidity, speed };
-        }
-
-        // Função para atualizar os valores dos cards
-        function updateSensorCards() {
-            const data = generateSensorData();
-            
-            document.getElementById('tempValue').textContent = data.temp + '°C';
-            document.getElementById('humidityValue').textContent = data.humidity + '%';
-            document.getElementById('speedValue').textContent = data.speed + ' cm/s';
-            
-            // Atualizar barras de progresso
-            document.getElementById('tempProgress').style.width = (data.temp / 30 * 100) + '%';
-            document.getElementById('humidityProgress').style.width = data.humidity + '%';
-            document.getElementById('speedProgress').style.width = (data.speed / 20 * 100) + '%';
-            
-            // Atualizar horário
-            const now = new Date();
-            document.getElementById('lastUpdate').textContent = now.toLocaleTimeString();
-            
-            return data;
-        }
-
-        // Configuração dos gráficos
-        function initCharts() {
-            // Gráfico de Temperatura e Umidade
-            const ctx1 = document.getElementById('tempHumidityChart').getContext('2d');
-            window.tempHumidityChart = new Chart(ctx1, {
-                type: 'line',
-                data: {
-                    labels: [],
-                    datasets: [{
-                        label: 'Temperatura (°C)',
-                        data: [],
-                        borderColor: '#dc3545',
-                        backgroundColor: 'rgba(220, 53, 69, 0.1)',
-                        tension: 0.4
-                    }, {
-                        label: 'Umidade (%)',
-                        data: [],
-                        borderColor: '#0d6efd',
-                        backgroundColor: 'rgba(13, 110, 253, 0.1)',
-                        tension: 0.4
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            position: 'top',
-                        }
-                    },
-                    scales: {
-                        y: {
-                            beginAtZero: false
-                        }
-                    }
-                }
-            });
-
-            // Gráfico de Velocidade
-            const ctx2 = document.getElementById('speedChart').getContext('2d');
-            window.speedChart = new Chart(ctx2, {
-                type: 'bar',
-                data: {
-                    labels: [],
-                    datasets: [{
-                        label: 'Velocidade (cm/s)',
-                        data: [],
-                        backgroundColor: '#198754',
-                        borderColor: '#198754',
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            position: 'top',
-                        }
-                    },
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            max: 20
-                        }
-                    }
-                }
-            });
-
-            // Gráfico Histórico
-            const ctx3 = document.getElementById('historicalChart').getContext('2d');
-            window.historicalChart = new Chart(ctx3, {
-                type: 'line',
-                data: {
-                    labels: ['00:00', '04:00', '08:00', '12:00', '16:00', '20:00', '24:00'],
-                    datasets: [{
-                        label: 'Temperatura (°C)',
-                        data: [22.1, 21.8, 23.5, 25.2, 26.1, 24.8, 23.2],
-                        borderColor: '#dc3545',
-                        backgroundColor: 'rgba(220, 53, 69, 0.1)',
-                        tension: 0.4
-                    }, {
-                        label: 'Umidade (%)',
-                        data: [68, 72, 65, 58, 55, 62, 67],
-                        borderColor: '#0d6efd',
-                        backgroundColor: 'rgba(13, 110, 253, 0.1)',
-                        tension: 0.4
-                    }, {
-                        label: 'Velocidade Média (cm/s)',
-                        data: [8, 5, 12, 15, 18, 14, 10],
-                        borderColor: '#198754',
-                        backgroundColor: 'rgba(25, 135, 84, 0.1)',
-                        tension: 0.4
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            position: 'top',
-                        }
-                    },
-                    scales: {
-                        y: {
-                            beginAtZero: false
-                        }
-                    }
-                }
-            });
-        }
-
-        // Função para atualizar gráficos em tempo real
-        function updateCharts(data) {
-            const now = new Date().toLocaleTimeString();
-            
-            // Atualizar gráfico de temperatura/umidade
-            if (window.tempHumidityChart.data.labels.length > 10) {
-                window.tempHumidityChart.data.labels.shift();
-                window.tempHumidityChart.data.datasets[0].data.shift();
-                window.tempHumidityChart.data.datasets[1].data.shift();
-            }
-            
-            window.tempHumidityChart.data.labels.push(now);
-            window.tempHumidityChart.data.datasets[0].data.push(parseFloat(data.temp));
-            window.tempHumidityChart.data.datasets[1].data.push(parseInt(data.humidity));
-            window.tempHumidityChart.update();
-            
-            // Atualizar gráfico de velocidade
-            if (window.speedChart.data.labels.length > 10) {
-                window.speedChart.data.labels.shift();
-                window.speedChart.data.datasets[0].data.shift();
-            }
-            
-            window.speedChart.data.labels.push(now);
-            window.speedChart.data.datasets[0].data.push(parseFloat(data.speed));
-            window.speedChart.update();
-        }
-
-        // Funções de controle
-        function refreshData() {
-            const data = updateSensorCards();
-            updateCharts(data);
-            
-            // Feedback visual
-            const btn = event.target.closest('button');
-            btn.innerHTML = '<i class="bi bi-check-circle"></i><br>Atualizado!';
-            btn.classList.remove('btn-outline-primary');
-            btn.classList.add('btn-success');
-            
-            setTimeout(() => {
-                btn.innerHTML = '<i class="bi bi-arrow-clockwise"></i><br>Atualizar Dados';
-                btn.classList.remove('btn-success');
-                btn.classList.add('btn-outline-primary');
-            }, 2000);
-        }
-
-        function startMonitoring() {
-            if (!isMonitoring) {
-                isMonitoring = true;
-                monitoringInterval = setInterval(() => {
-                    const data = updateSensorCards();
-                    updateCharts(data);
-                }, 3000); // Atualiza a cada 3 segundos
-                
-                const btn = event.target.closest('button');
-                btn.innerHTML = '<i class="bi bi-pause-circle"></i><br>Monitorando...';
-                btn.classList.remove('btn-outline-success');
-                btn.classList.add('btn-success');
-            }
-        }
-
-        function stopMonitoring() {
-            if (isMonitoring) {
-                isMonitoring = false;
-                clearInterval(monitoringInterval);
-                
-                // Resetar botão de start
-                const startBtn = document.querySelector('button[onclick="startMonitoring()"]');
-                startBtn.innerHTML = '<i class="bi bi-play-circle"></i><br>Iniciar Monitoramento';
-                startBtn.classList.remove('btn-success');
-                startBtn.classList.add('btn-outline-success');
-                
-                const btn = event.target.closest('button');
-                btn.innerHTML = '<i class="bi bi-check-circle"></i><br>Parado!';
-                btn.classList.remove('btn-outline-danger');
-                btn.classList.add('btn-danger');
-                
-                setTimeout(() => {
-                    btn.innerHTML = '<i class="bi bi-stop-circle"></i><br>Parar Monitoramento';
-                    btn.classList.remove('btn-danger');
-                    btn.classList.add('btn-outline-danger');
-                }, 2000);
-            }
-        }
-
-        // Inicialização
-        document.addEventListener('DOMContentLoaded', function() {
-            initCharts();
-            updateSensorCards();
-        });
-    </script>
+    
 </body>
 </html>
