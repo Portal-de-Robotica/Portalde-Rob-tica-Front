@@ -34,7 +34,7 @@ customElements.define('navbar-component', NavbarComponent);
 
 const footerTemplate = document.createElement('template');
 footerTemplate.innerHTML = `
-  <footer class="bg-primary text-white py-4 mt-5">
+  <footer class="bg-primary text-white py-2 mt-5">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
