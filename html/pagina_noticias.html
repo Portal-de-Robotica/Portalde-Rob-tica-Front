@@ -1,37 +1,230 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notícias - RoboTech IoT</title>
-
+    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css"
-        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/noticias.css">
 </head>
 
 <body>
+    <!-- Importa o componente -->
+    <script type="module" src="../js/components.js"></script>
     
-   <!-- Importa o componente -->
-   <script type="module" src="../js/components.js"></script>
-
-   <!-- Navbar -->
-   <navbar-component></navbar-component>
-
-
+    <!-- Navbar -->
+    <navbar-component></navbar-component>
+    
     <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="display-4 fw-bold mb-3">
+                            <i class="bi bi-newspaper" style="color: white;"></i> Notícias IoT
+                        </h1>
+                        <p class="lead">As últimas novidades do mundo da Internet das Coisas e Robótica</p>
+                        <div class="my-4">
+                            <span class="badge bg-light text-dark fs-6 py-2 px-3">
+                                <i class="bi bi-clock"></i> Atualizado hoje
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+     
+  <!-- Minhas noticias -->
+        <div class="container mt-5">
+            <div class="row">
+                <!-- Conteúdo Principal -->
+                <div class="col-lg-8">
+                    
+                    <!-- Notícia Principal -->
+                    <div class="row mb-5">
+                        <div class="col-12">
+                            <div class="card news-card border border-2  ">
+                                <div class="position-relative">
+                                    <img src="../img/n1.png" class="card-img-top" style="width: auto%;" alt="IoT Revolution">
+                                    <span class="featured-badge">Destaque</span>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <span class="news-category">Tecnologia</span>
+                                        <span class="news-date">
+                                            <i class="bi bi-calendar3"></i> 15 de setembro, 2025
+                                        </span>
+                                    </div>
+                                    <h3 class="card-title">Revolução IoT: Sensores Inteligentes Transformam a Agricultura</h3>
+                                    <p class="card-text">Novos dispositivos IoT estão revolucionando o setor agrícola, permitindo monitoramento em tempo real da umidade do solo, temperatura e condições climáticas. Esta tecnologia promete aumentar a produtividade em até 40%.</p>
+                                    <button class="btn btn-primary">
+                                        <i class="bi bi-arrow-right"></i> Ler mais
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Grade de Notícias -->
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card news-card h-100">
+                                <img src="https://via.placeholder.com/400x200/198754/ffffff?text=Smart+Home" class="card-img-top" alt="Casa Inteligente">
+                                <div class="card-body">
+                                    <span class="news-category">Casa Inteligente</span>
+                                    <h5 class="card-title mt-2">Casas Inteligentes: O Futuro é Agora</h5>
+                                    <p class="card-text">Sistemas automatizados de iluminação, segurança e climatização estão se tornando mais acessíveis.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="news-date">
+                                            <i class="bi bi-clock"></i> 2 horas atrás
+                                        </span>
+                                        <button class="btn btn-outline-primary btn-sm">Ler</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+                            <div class="card news-card h-100">
+                                <img src="https://via.placeholder.com/400x200/dc3545/ffffff?text=Robot+AI" class="card-img-top" alt="Robô com IA">
+                                <div class="card-body">
+                                    <span class="news-category">Inteligência Artificial</span>
+                                    <h5 class="card-title mt-2">Robôs com IA Chegam às Fábricas</h5>
+                                    <p class="card-text">Indústrias adotam robôs inteligentes para aumentar eficiência e reduzir custos operacionais.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="news-date">
+                                            <i class="bi bi-clock"></i> 4 horas atrás
+                                        </span>
+                                        <button class="btn btn-outline-primary btn-sm">Ler</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+                            <div class="card news-card h-100">
+                                <img src="https://via.placeholder.com/400x200/ffc107/000000?text=5G+Network" class="card-img-top" alt="Rede 5G">
+                                <div class="card-body">
+                                    <span class="news-category">Conectividade</span>
+                                    <h5 class="card-title mt-2">5G Acelera Expansão da IoT</h5>
+                                    <p class="card-text">Nova geração de conectividade móvel permite conexão de milhões de dispositivos simultaneamente.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="news-date">
+                                            <i class="bi bi-clock"></i> 6 horas atrás
+                                        </span>
+                                        <button class="btn btn-outline-primary btn-sm">Ler</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+                            <div class="card news-card h-100">
+                                <img src="https://via.placeholder.com/400x200/6610f2/ffffff?text=Smart+City" class="card-img-top" alt="Cidade Inteligente">
+                                <div class="card-body">
+                                    <span class="news-category">Cidades Inteligentes</span>
+                                    <h5 class="card-title mt-2">São Paulo Testa Semáforos Inteligentes</h5>
+                                    <p class="card-text">Sistema IoT ajusta tempo dos semáforos baseado no fluxo de trânsito em tempo real.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span class="news-date">
+                                            <i class="bi bi-clock"></i> 1 dia atrás
+                                        </span>
+                                        <button class="btn btn-outline-primary btn-sm">Ler</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botão Carregar Mais -->
+                    <div class="text-center my-4">
+                        <button class="btn btn-lg btn-outline-primary" onclick="carregarMaisNoticias()">
+                            <i class="bi bi-arrow-down-circle"></i> Carregar mais notícias
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    
+                    <!-- Buscar -->
+                    <div class="search-box">
+                        <h5><i class="bi bi-search"></i> Buscar Notícias</h5>
+                        <div class="input-group mt-3">
+                            <input type="text" class="form-control" placeholder="Digite sua busca...">
+                            <button class="btn btn-primary" type="button">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Notícias em Destaque -->
+                    <div class="trending-news">
+                        <h5><i class="bi bi-fire"></i> Tendência</h5>
+                        <h6 class="mt-3">Brasil lidera desenvolvimento de IoT na América Latina</h6>
+                        <p class="mb-2">País se destaca em inovação tecnológica com crescimento de 300% em dispositivos conectados.</p>
+                        <button class="btn btn-light btn-sm">Leia mais</button>
+                    </div>
+
+                    <!-- Categorias -->
+                    <div class="sidebar-widget">
+                        <h5><i class="bi bi-tags"></i> Categorias</h5>
+                        <div class="d-grid gap-2 mt-3">
+                            <button class="btn btn-outline-primary btn-sm text-start" onclick="filtrarCategoria('tecnologia')">
+                                <i class="bi bi-cpu"></i> Tecnologia <span class="badge bg-primary float-end">12</span>
+                            </button>
+                            <button class="btn btn-outline-success btn-sm text-start" onclick="filtrarCategoria('casa-inteligente')">
+                                <i class="bi bi-house"></i> Casa Inteligente <span class="badge bg-success float-end">8</span>
+                            </button>
+                            <button class="btn btn-outline-danger btn-sm text-start" onclick="filtrarCategoria('ia')">
+                                <i class="bi bi-robot"></i> Inteligência Artificial <span class="badge bg-danger float-end">15</span>
+                            </button>
+                            <button class="btn btn-outline-warning btn-sm text-start" onclick="filtrarCategoria('conectividade')">
+                                <i class="bi bi-wifi"></i> Conectividade <span class="badge bg-warning float-end">6</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tags Populares -->
+                    <div class="sidebar-widget">
+                        <h5><i class="bi bi-hash"></i> Tags Populares</h5>
+                        <div class="tag-cloud mt-3">
+                            <span class="badge bg-primary">IoT</span>
+                            <span class="badge bg-success">Arduino</span>
+                            <span class="badge bg-danger">Raspberry Pi</span>
+                            <span class="badge bg-warning text-dark">Sensores</span>
+                            <span class="badge bg-info">Automação</span>
+                            <span class="badge bg-secondary">5G</span>
+                            <span class="badge bg-dark">IA</span>
+                            <span class="badge bg-primary">Smart Home</span>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="sidebar-widget">
+                        <h5><i class="bi bi-envelope"></i> Newsletter</h5>
+                        <p class="text-muted">Receba as últimas notícias de IoT no seu email!</p>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Seu email">
+                        </div>
+                        <button class="btn btn-primary w-100" onclick="assinarNewsletter()">
+                            <i class="bi bi-send"></i> Assinar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
-
+    
     <!-- Footer -->
     <footer-component></footer-component>
-
-
+    
     <script src="https://kit.fontawesome.com/b05eb750d3.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     <script src="../js/noticias.js"></script>
 </body>
-
 </html>
