@@ -1,0 +1,141 @@
+/* ===== MODO DARK GLOBAL ===== */
+
+/* Cores do modo dark */
+[data-bs-theme="dark"] {
+  --bs-body-bg: #121212;
+  --bs-body-color: #ffffff;
+  --bs-secondary-bg: #1e1e1e;
+  --bs-tertiary-bg: #2d2d2d;
+}
+
+/* Body no modo dark */
+[data-bs-theme="dark"] body {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+}
+
+/* Cards no modo dark */
+[data-bs-theme="dark"] .card,
+[data-bs-theme="dark"] .sensor-card,
+[data-bs-theme="dark"] .news-card {
+  background-color: #1e1e1e !important;
+  border-color: #333 !important;
+  color: #ffffff !important;
+}
+
+[data-bs-theme="dark"] .card-body {
+  color: #ffffff !important;
+}
+
+/* Hero section no modo dark */
+[data-bs-theme="dark"] .hero-section {
+  background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%) !important;
+}
+
+/* Sidebar widgets no modo dark */
+[data-bs-theme="dark"] .search-box,
+[data-bs-theme="dark"] .sidebar-widget {
+  background-color: #1e1e1e !important;
+  color: #ffffff !important;
+  border: 1px solid #333 !important;
+}
+
+/* Charts containers no modo dark */
+[data-bs-theme="dark"] .chart-container {
+  background-color: #1e1e1e !important;
+  color: #ffffff !important;
+  border: 1px solid #333 !important;
+}
+
+/* Trending news no modo dark */
+[data-bs-theme="dark"] .trending-news {
+  background: linear-gradient(135deg, #991b1b, #c2410c) !important;
+}
+
+/* Form controls no modo dark */
+[data-bs-theme="dark"] .form-control {
+  background-color: #2d2d2d !important;
+  border-color: #444 !important;
+  color: #ffffff !important;
+}
+
+[data-bs-theme="dark"] .form-control:focus {
+  background-color: #2d2d2d !important;
+  border-color: #0d6efd !important;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25) !important;
+  color: #ffffff !important;
+}
+
+[data-bs-theme="dark"] .form-control::placeholder {
+  color: #aaa !important;
+}
+
+/* Progress bars no modo dark */
+[data-bs-theme="dark"] .progress {
+  background-color: #2d2d2d !important;
+}
+
+/* Text colors no modo dark */
+[data-bs-theme="dark"] .text-muted {
+  color: #aaa !important;
+}
+
+[data-bs-theme="dark"] .news-date {
+  color: #aaa !important;
+}
+
+/* Badges no modo dark */
+[data-bs-theme="dark"] .badge.bg-light {
+  background-color: #2d2d2d !important;
+  color: #ffffff !important;
+}
+
+/* Botões outline no modo dark */
+[data-bs-theme="dark"] .btn-outline-primary {
+  color: #6ea8fe !important;
+  border-color: #6ea8fe !important;
+}
+
+[data-bs-theme="dark"] .btn-outline-primary:hover {
+  background-color: #6ea8fe !important;
+  border-color: #6ea8fe !important;
+  color: #000 !important;
+}
+
+[data-bs-theme="dark"] .btn-outline-success {
+  color: #75dd7a !important;
+  border-color: #75dd7a !important;
+}
+
+[data-bs-theme="dark"] .btn-outline-danger {
+  color: #ea868f !important;
+  border-color: #ea868f !important;
+}
+
+[data-bs-theme="dark"] .btn-outline-warning {
+  color: #ffda6a !important;
+  border-color: #ffda6a !important;
+}
+
+/* Transição suave */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+}
+
+/* Scrollbar no modo dark */
+[data-bs-theme="dark"] ::-webkit-scrollbar {
+  width: 8px;
+}
+
+[data-bs-theme="dark"] ::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+[data-bs-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 4px;
+}
+
+[data-bs-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
