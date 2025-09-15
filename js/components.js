@@ -42,7 +42,7 @@ footerTemplate.innerHTML = `
           <p>Sistema de monitoramento inteligente para robótica educacional</p>
         </div>
         <div class="col-md-6 text-md-end">
-          <p class="mb-0">Trabalho Escolar - 2025</p>
+          <p class="my-4">Trabalho Escolar - 2025</p>
         </div>
       </div>
     </div>
