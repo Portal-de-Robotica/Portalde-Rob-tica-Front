@@ -25,8 +25,8 @@
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <h1 class="display-4 fw-bold mb-3">
-                            <i class="fa-brands fa-android"style="color: white;"></i></i> Análise de Dados
-                             </h1>
+                            <i class="fa-brands fa-android" style="color: white;"></i> Análise de Dados
+                        </h1>
                         <p class="lead">Visualize e analise os dados coletados pelos sensores IoT</p>
                         <div class="my-4">
                             <span class="badge bg-light text-dark fs-6 py-2 px-3">
@@ -188,7 +188,7 @@
                                     <div class="row">
                                         <div class="col-md-4 mb-3">
                                             <label class="form-label">Período de Análise</label>
-                                            <select class="form-select" id="periodSelect">
+                                            <select class="form-select" id="periodSelect" aria-label="Selecionar período de análise">
                                                 <option value="1h">Última hora</option>
                                                 <option value="6h">Últimas 6 horas</option>
                                                 <option value="24h" selected>Últimas 24 horas</option>
@@ -198,7 +198,7 @@
                                         
                                         <div class="col-md-4 mb-3">
                                             <label class="form-label">Tipo de Sensor</label>
-                                            <select class="form-select" id="sensorSelect">
+                                            <select class="form-select" id="sensorSelect" aria-label="Selecionar tipo de sensor">
                                                 <option value="all" selected>Todos os sensores</option>
                                                 <option value="temp">Apenas Temperatura</option>
                                                 <option value="hum">Apenas Umidade</option>
@@ -209,13 +209,13 @@
                                         <div class="col-md-4 mb-3">
                                             <label class="form-label">Atualização</label>
                                             <div class="d-flex gap-2">
-                                                <button class="btn btn-success btn-sm" onclick="startAutoUpdate()">
+                                                <button class="btn btn-success btn-sm" onclick="startAutoUpdate()" aria-label="Iniciar atualização automática">
                                                     <i class="bi bi-play"></i> Auto
                                                 </button>
-                                                <button class="btn btn-danger btn-sm" onclick="stopAutoUpdate()">
+                                                <button class="btn btn-danger btn-sm" onclick="stopAutoUpdate()" aria-label="Parar atualização automática">
                                                     <i class="bi bi-stop"></i> Stop
                                                 </button>
-                                                <button class="btn btn-primary btn-sm" onclick="refreshCharts()">
+                                                <button class="btn btn-primary btn-sm" onclick="refreshCharts()" aria-label="Atualizar gráficos">
                                                     <i class="bi bi-arrow-clockwise"></i>
                                                 </button>
                                             </div>
@@ -234,16 +234,16 @@
                     <div class="sidebar-widget">
                         <h6><i class="bi bi-funnel"></i> Filtros Rápidos</h6>
                         <div class="d-grid gap-2 mt-3">
-                            <button class="btn btn-outline-primary btn-sm" onclick="filterToday()">
+                            <button class="btn btn-outline-primary btn-sm" onclick="filterToday()" aria-label="Filtrar dados de hoje">
                                 <i class="bi bi-calendar-day"></i> Hoje
                             </button>
-                            <button class="btn btn-outline-success btn-sm" onclick="filterWeek()">
+                            <button class="btn btn-outline-success btn-sm" onclick="filterWeek()" aria-label="Filtrar dados da semana">
                                 <i class="bi bi-calendar-week"></i> Esta semana
                             </button>
-                            <button class="btn btn-outline-warning btn-sm" onclick="filterMonth()">
+                            <button class="btn btn-outline-warning btn-sm" onclick="filterMonth()" aria-label="Filtrar dados do mês">
                                 <i class="bi bi-calendar-month"></i> Este mês
                             </button>
-                            <button class="btn btn-outline-danger btn-sm" onclick="resetFilters()">
+                            <button class="btn btn-outline-danger btn-sm" onclick="resetFilters()" aria-label="Limpar filtros">
                                 <i class="bi bi-arrow-counterclockwise"></i> Limpar
                             </button>
                         </div>
@@ -294,16 +294,16 @@
                     <div class="sidebar-widget">
                         <h6><i class="bi bi-download"></i> Exportar</h6>
                         <div class="d-grid gap-2 mt-3">
-                            <button class="btn btn-outline-primary btn-sm" onclick="exportCSV()">
+                            <button class="btn btn-outline-primary btn-sm" onclick="exportCSV()" aria-label="Exportar dados em CSV">
                                 <i class="bi bi-filetype-csv"></i> CSV
                             </button>
-                            <button class="btn btn-outline-success btn-sm" onclick="exportExcel()">
+                            <button class="btn btn-outline-success btn-sm" onclick="exportExcel()" aria-label="Exportar dados em Excel">
                                 <i class="bi bi-file-excel"></i> Excel
                             </button>
-                            <button class="btn btn-outline-danger btn-sm" onclick="exportPDF()">
+                            <button class="btn btn-outline-danger btn-sm" onclick="exportPDF()" aria-label="Exportar dados em PDF">
                                 <i class="bi bi-file-pdf"></i> PDF
                             </button>
-                            <button class="btn btn-outline-warning btn-sm" onclick="exportImage()">
+                            <button class="btn btn-outline-warning btn-sm" onclick="exportImage()" aria-label="Exportar dados como imagem">
                                 <i class="bi bi-image"></i> Imagem
                             </button>
                         </div>

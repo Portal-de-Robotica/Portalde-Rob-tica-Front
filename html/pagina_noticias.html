@@ -8,7 +8,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/noticias.css">
-    
 </head>
 
 <body>
@@ -38,8 +37,7 @@
             </div>
         </section>
 
-     
-  <!-- Minhas noticias -->
+        <!-- Minhas notícias -->
         <div class="container mt-5">
             <div class="row">
                 <!-- Conteúdo Principal -->
@@ -62,7 +60,7 @@
                                     </div>
                                     <h3 class="card-title">Revolução IoT: Sensores Inteligentes Transformam a Agricultura</h3>
                                     <p class="card-text">Novos dispositivos IoT estão revolucionando o setor agrícola, permitindo monitoramento em tempo real da umidade do solo, temperatura e condições climáticas. Esta tecnologia promete aumentar a produtividade em até 40%.</p>
-                                    <button class="btn btn-primary">
+                                    <button class="btn btn-primary" aria-label="Ler mais sobre Revolução IoT">
                                         <i class="bi bi-arrow-right"></i> Ler mais
                                     </button>
                                 </div>
@@ -73,8 +71,8 @@
                     <hr class="my-4">
 
                     <!-- Grade de Notícias -->
-                    <div class="row ">
-                        <div class="col-md-6 mb-4 ">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
                             <div class="card news-card h-100 border border-3">
                                 <img src="../img/n2-casa.png" class="card-img-top" alt="Casa Inteligente">
                                 <div class="card-body">
@@ -85,7 +83,7 @@
                                         <span class="news-date">
                                             <i class="bi bi-clock"></i> 2 horas atrás
                                         </span>
-                                        <button class="btn btn-outline-primary btn-sm">Ler</button>
+                                        <button class="btn btn-outline-primary btn-sm" aria-label="Ler notícia sobre Casas Inteligentes">Ler</button>
                                     </div>
                                 </div>
                             </div>
@@ -102,7 +100,7 @@
                                         <span class="news-date">
                                             <i class="bi bi-clock"></i> 4 horas atrás
                                         </span>
-                                        <button class="btn btn-outline-primary btn-sm">Ler</button>
+                                        <button class="btn btn-outline-primary btn-sm" aria-label="Ler notícia sobre Robôs com IA">Ler</button>
                                     </div>
                                 </div>
                             </div>
@@ -119,7 +117,7 @@
                                         <span class="news-date">
                                             <i class="bi bi-clock"></i> 6 horas atrás
                                         </span>
-                                        <button class="btn btn-outline-primary btn-sm">Ler</button>
+                                        <button class="btn btn-outline-primary btn-sm" aria-label="Ler notícia sobre 5G e IoT">Ler</button>
                                     </div>
                                 </div>
                             </div>
@@ -136,7 +134,7 @@
                                         <span class="news-date">
                                             <i class="bi bi-clock"></i> 1 dia atrás
                                         </span>
-                                        <button class="btn btn-outline-primary btn-sm">Ler</button>
+                                        <button class="btn btn-outline-primary btn-sm" aria-label="Ler notícia sobre Semáforos Inteligentes">Ler</button>
                                     </div>
                                 </div>
                             </div>
@@ -145,7 +143,7 @@
 
                     <!-- Botão Carregar Mais -->
                     <div class="text-center my-4">
-                        <button class="btn btn-lg btn-outline-primary" onclick="carregarMaisNoticias()">
+                        <button class="btn btn-lg btn-outline-primary" onclick="carregarMaisNoticias()" aria-label="Carregar mais notícias">
                             <i class="bi bi-arrow-down-circle"></i> Carregar mais notícias
                         </button>
                     </div>
@@ -158,8 +156,8 @@
                     <div class="search-box">
                         <h5><i class="bi bi-search"></i> Buscar Notícias</h5>
                         <div class="input-group mt-3">
-                            <input type="text" class="form-control" placeholder="Digite sua busca...">
-                            <button class="btn btn-primary" type="button">
+                            <input type="text" class="form-control" placeholder="Digite sua busca..." aria-label="Campo para busca de notícias">
+                            <button class="btn btn-primary" type="button" aria-label="Pesquisar notícias">
                                 <i class="bi bi-search"></i>
                             </button>
                         </div>
@@ -170,23 +168,23 @@
                         <h5><i class="bi bi-fire"></i> Tendência</h5>
                         <h6 class="mt-3">Brasil lidera desenvolvimento de IoT na América Latina</h6>
                         <p class="mb-2">País se destaca em inovação tecnológica com crescimento de 300% em dispositivos conectados.</p>
-                        <button class="btn btn-light btn-sm">Leia mais</button>
+                        <button class="btn btn-light btn-sm" aria-label="Ler notícia em destaque sobre IoT no Brasil">Leia mais</button>
                     </div>
 
                     <!-- Categorias -->
                     <div class="sidebar-widget">
                         <h5><i class="bi bi-tags"></i> Categorias</h5>
                         <div class="d-grid gap-2 mt-3">
-                            <button class="btn btn-outline-primary btn-sm text-start" onclick="filtrarCategoria('tecnologia')">
+                            <button class="btn btn-outline-primary btn-sm text-start" onclick="filtrarCategoria('tecnologia')" aria-label="Filtrar notícias de Tecnologia">
                                 <i class="bi bi-cpu"></i> Tecnologia <span class="badge bg-primary float-end">12</span>
                             </button>
-                            <button class="btn btn-outline-success btn-sm text-start" onclick="filtrarCategoria('casa-inteligente')">
+                            <button class="btn btn-outline-success btn-sm text-start" onclick="filtrarCategoria('casa-inteligente')" aria-label="Filtrar notícias de Casa Inteligente">
                                 <i class="bi bi-house"></i> Casa Inteligente <span class="badge bg-success float-end">8</span>
                             </button>
-                            <button class="btn btn-outline-danger btn-sm text-start" onclick="filtrarCategoria('ia')">
+                            <button class="btn btn-outline-danger btn-sm text-start" onclick="filtrarCategoria('ia')" aria-label="Filtrar notícias de Inteligência Artificial">
                                 <i class="bi bi-robot"></i> Inteligência Artificial <span class="badge bg-danger float-end">15</span>
                             </button>
-                            <button class="btn btn-outline-warning btn-sm text-start" onclick="filtrarCategoria('conectividade')">
+                            <button class="btn btn-outline-warning btn-sm text-start" onclick="filtrarCategoria('conectividade')" aria-label="Filtrar notícias de Conectividade">
                                 <i class="bi bi-wifi"></i> Conectividade <span class="badge bg-warning float-end">6</span>
                             </button>
                         </div>
@@ -212,9 +210,9 @@
                         <h5><i class="bi bi-envelope"></i> Newsletter</h5>
                         <p class="text-muted">Receba as últimas notícias de IoT no seu email!</p>
                         <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Seu email">
+                            <input type="email" class="form-control" placeholder="Seu email" aria-label="Campo para digitar seu email">
                         </div>
-                        <button class="btn btn-primary w-100" onclick="assinarNewsletter()">
+                        <button class="btn btn-primary w-100" onclick="assinarNewsletter()" aria-label="Assinar newsletter">
                             <i class="bi bi-send"></i> Assinar
                         </button>
                     </div>
