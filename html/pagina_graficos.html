@@ -1,175 +1,323 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tandron IoT - Página Vídeos</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" rel="stylesheet" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.min.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráficos - RoboTech IoT</title>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.min.js" defer></script>
+    <link rel="stylesheet" href="../css/pagina_graficos.css">
 </head>
+
 <body>
+    <!-- Importa o componente -->
+    <script type="module" src="../js/components.js"></script>
+    
+    <!-- Navbar -->
+    <navbar-component></navbar-component>
+    
+    <main>
+           <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="display-4 fw-bold mb-3">
+                            <i class="fa-brands fa-android"style="color: white;"></i></i> Análise de Dados
+                             </h1>
+                        <p class="lead">Visualize e analise os dados coletados pelos sensores IoT</p>
+                        <div class="my-4">
+                            <span class="badge bg-light text-dark fs-6 py-2 px-3">
+                                <i class="bi bi-bar-chart"></i> Dados em tempo real
+                            </span>
+                            <span class="badge bg-success fs-6 py-2 px-3 ms-2">
+                                <i class="bi bi-wifi"></i> Sistema Online
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- Importa o componente -->
-  <script type="module" src="../js/components.js"></script>
+        <div class="container mt-5">
+            <div class="row">
+                <!-- Conteúdo Principal -->
+                <div class="col-lg-9">
+                    
+                    <!-- Estatísticas Rápidas -->
+                    <div class="row mb-5">
+                        <div class="col-md-3 mb-3">
+                            <div class="card stats-card text-center">
+                                <div class="card-body">
+                                    <div class="text-danger mb-2">
+                                        <i class="bi bi-thermometer-high" style="font-size: 2rem;"></i>
+                                    </div>
+                                    <h6 class="card-title">Temperatura</h6>
+                                    <h4 class="text-danger" id="currentTemp">23.5°C</h4>
+                                    <small class="text-muted">Atual</small>
+                                </div>
+                            </div>
+                        </div>
 
-  <!-- Navbar -->
-  <navbar-component></navbar-component>
+                        <div class="col-md-3 mb-3">
+                            <div class="card stats-card text-center">
+                                <div class="card-body">
+                                    <div class="text-primary mb-2">
+                                        <i class="bi bi-moisture" style="font-size: 2rem;"></i>
+                                    </div>
+                                    <h6 class="card-title">Umidade</h6>
+                                    <h4 class="text-primary" id="currentHumidity">65%</h4>
+                                    <small class="text-muted">Atual</small>
+                                </div>
+                            </div>
+                        </div>
 
-  <!-- Conteúdo principal que muda em cada página -->
-  <main class="container mt-4">
+                        <div class="col-md-3 mb-3">
+                            <div class="card stats-card text-center">
+                                <div class="card-body">
+                                    <div class="text-success mb-2">
+                                        <i class="bi bi-speedometer2" style="font-size: 2rem;"></i>
+                                    </div>
+                                    <h6 class="card-title">Velocidade</h6>
+                                    <h4 class="text-success" id="currentSpeed">12 cm/s</h4>
+                                    <small class="text-muted">Atual</small>
+                                </div>
+                            </div>
+                        </div>
 
-<!-- Hero Section -->
-<section class="hero-section">
-  <div class="container">
-      <div class="row">
-          <div class="col-lg-12 text-center">
-              <h1 class="display-4 fw-bold mb-3">
-                  <i class="fa-solid fa-robot" style="color: brown;"></i></i> Monitoramento de Sensores
-              </h1>
-              <p class="lead">Acompanhe em tempo real os dados dos sensores do nosso robô IoT</p>
-              <div class="my-4">
-                  <div class="mx-auto mb-3">
-                      <span class="badge bg-success fs-6 py-1">
-                          <i class="bi bi-wifi"></i> Sistema Online
-                      </span>
-                  </div>
-                  <span class="text-dark-50 ms-3 mt-2 update-time ">
-                      Última atualização: <span id="lastUpdate">--:--</span>
-                  </span>
-              </div>
-          </div>
-      </div>
-  </div>
-</section>
+                        <div class="col-md-3 mb-3">
+                            <div class="card stats-card text-center">
+                                <div class="card-body">
+                                    <div class="text-warning mb-2">
+                                        <i class="bi bi-activity" style="font-size: 2rem;"></i>
+                                    </div>
+                                    <h6 class="card-title">Status</h6>
+                                    <h4 class="text-warning">Ativo</h4>
+                                    <small class="text-muted">Sistema</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-<!-- Sensor Cards -->
-<div class="container my-2">
-  <div class="row">
-      <div class="col-md-4 mb-4">
-          <div class="card sensor-card h-100">
-              <div class="card-body text-center">
-                  <div class="text-danger mb-3">
-                      <i class="bi bi-thermometer-high" style="font-size: 3rem;"></i>
-                  </div>
-                  <h5 class="card-title">Temperatura</h5>
-                  <div class="sensor-value text-danger" id="tempValue">23.5°C</div>
-                  <p class="card-text text-muted">Sensor de temperatura ambiente</p>
-                  <div class="progress" style="height: 8px;">
-                      <div class="progress-bar bg-danger" role="progressbar" style="width: 47%" id="tempProgress">
-                      </div>
-                  </div>
-                  <small class="text-muted">Normal: 20-25°C</small>
-              </div>
-          </div>
-      </div>
+                    <!-- Gráfico Principal -->
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <div class="card chart-card">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0">
+                                        <i class="bi bi-graph-up"></i> Monitoramento em Tempo Real
+                                    </h5>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="realtimeChart" width="400" height="150"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-      <div class="col-md-4 mb-4">
-          <div class="card sensor-card h-100">
-              <div class="card-body text-center">
-                  <div class="text-primary mb-3">
-                      <i class="bi bi-moisture" style="font-size: 3rem;"></i>
-                  </div>
-                  <h5 class="card-title">Umidade</h5>
-                  <div class="sensor-value text-primary" id="humidityValue">65%</div>
-                  <p class="card-text text-muted">Sensor de umidade do ar</p>
-                  <div class="progress" style="height: 8px;">
-                      <div class="progress-bar bg-primary" role="progressbar" style="width: 65%"
-                          id="humidityProgress"></div>
-                  </div>
-                  <small class="text-muted">Ideal: 40-70%</small>
-              </div>
-          </div>
-      </div>
+                    <!-- Gráficos Secundários -->
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card chart-card">
+                                <div class="card-header bg-danger text-white">
+                                    <h6 class="mb-0">
+                                        <i class="bi bi-thermometer"></i> Histórico de Temperatura
+                                    </h6>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="temperatureChart" width="400" height="200"></canvas>
+                                </div>
+                            </div>
+                        </div>
 
-      <div class="col-md-4 mb-4">
-          <div class="card sensor-card h-100">
-              <div class="card-body text-center">
-                  <div class="text-success mb-3">
-                      <i class="bi bi-speedometer2" style="font-size: 3rem;"></i>
-                  </div>
-                  <h5 class="card-title">Velocidade do Robô</h5>
-                  <div class="sensor-value text-success" id="speedValue">12 cm/s</div>
-                  <p class="card-text text-muted">Velocidade de movimento</p>
-                  <div class="progress" style="height: 8px;">
-                      <div class="progress-bar bg-success" role="progressbar" style="width: 60%"
-                          id="speedProgress"></div>
-                  </div>
-                  <small class="text-muted">Máx: 20 cm/s</small>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card chart-card">
+                                <div class="card-header bg-primary text-white">
+                                    <h6 class="mb-0">
+                                        <i class="bi bi-droplet"></i> Histórico de Umidade
+                                    </h6>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="humidityChart" width="400" height="200"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-<!-- Charts Section -->
-<div class="container my-5">
-  <div class="row">
-      <div class="col-lg-6 mb-4">
-          <div class="chart-container">
-              <h4 class="mb-4"><i class="bi bi-graph-up text-primary"></i> Temperatura e Umidade</h4>
-              <canvas id="tempHumidityChart" width="400" height="200"></canvas>
-          </div>
-      </div>
+                    <!-- Gráfico de Pizza e Barras -->
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card chart-card">
+                                <div class="card-header bg-success text-white">
+                                    <h6 class="mb-0">
+                                        <i class="bi bi-pie-chart"></i> Distribuição de Atividade
+                                    </h6>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="pieChart" width="400" height="200"></canvas>
+                                </div>
+                            </div>
+                        </div>
 
-      <div class="col-lg-6 mb-4">
-          <div class="chart-container">
-              <h4 class="mb-4"><i class="bi bi-speedometer text-success"></i> Velocidade do Robô</h4>
-              <canvas id="speedChart" width="400" height="200"></canvas>
-          </div>
-      </div>
-  </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card chart-card">
+                                <div class="card-header bg-warning text-dark">
+                                    <h6 class="mb-0">
+                                        <i class="bi bi-bar-chart"></i> Comparativo Semanal
+                                    </h6>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="barChart" width="400" height="200"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-  <div class="row">
-      <div class="col-12">
-          <div class="chart-container">
-              <h4 class="mb-4"><i class="bi bi-bar-chart text-warning"></i> Histórico dos Sensores (24h)</h4>
-              <canvas id="historicalChart" width="400" height="150"></canvas>
-          </div>
-      </div>
-  </div>
-</div>
+                    <!-- Controles dos Gráficos -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header bg-secondary text-white">
+                                    <h6 class="mb-0">
+                                        <i class="bi bi-sliders"></i> Controles de Visualização
+                                    </h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-4 mb-3">
+                                            <label class="form-label">Período de Análise</label>
+                                            <select class="form-select" id="periodSelect">
+                                                <option value="1h">Última hora</option>
+                                                <option value="6h">Últimas 6 horas</option>
+                                                <option value="24h" selected>Últimas 24 horas</option>
+                                                <option value="7d">Últimos 7 dias</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="col-md-4 mb-3">
+                                            <label class="form-label">Tipo de Sensor</label>
+                                            <select class="form-select" id="sensorSelect">
+                                                <option value="all" selected>Todos os sensores</option>
+                                                <option value="temp">Apenas Temperatura</option>
+                                                <option value="hum">Apenas Umidade</option>
+                                                <option value="speed">Apenas Velocidade</option>
+                                            </select>
+                                        </div>
 
-<!-- Controls Section -->
-<div class="container my-5">
-  <div class="row">
-      <div class="col-lg-8 mx-auto">
-          <div class="card">
-              <div class="card-header bg-primary text-white">
-                  <h5 class="mb-0"><i class="bi bi-gear"></i> Controles do Sistema</h5>
-              </div>
-              <div class="card-body">
-                  <div class="row">
-                      <div class="col-md-4 text-center mb-3">
-                          <button class="btn btn-outline-primary btn-lg w-100" onclick="refreshData()">
-                              <i class="bi bi-arrow-clockwise"></i><br>
-                              Atualizar Dados
-                          </button>
-                      </div>
-                      <div class="col-md-4 text-center mb-3">
-                          <button class="btn btn-outline-success btn-lg w-100" onclick="startMonitoring()">
-                              <i class="bi bi-play-circle"></i><br>
-                              Iniciar Monitoramento
-                          </button>
-                      </div>
-                      <div class="col-md-4 text-center mb-3">
-                          <button class="btn btn-outline-danger btn-lg w-100" onclick="stopMonitoring()">
-                              <i class="bi bi-stop-circle"></i><br>
-                              Parar Monitoramento
-                          </button>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
-  </main>
+                                        <div class="col-md-4 mb-3">
+                                            <label class="form-label">Atualização</label>
+                                            <div class="d-flex gap-2">
+                                                <button class="btn btn-success btn-sm" onclick="startAutoUpdate()">
+                                                    <i class="bi bi-play"></i> Auto
+                                                </button>
+                                                <button class="btn btn-danger btn-sm" onclick="stopAutoUpdate()">
+                                                    <i class="bi bi-stop"></i> Stop
+                                                </button>
+                                                <button class="btn btn-primary btn-sm" onclick="refreshCharts()">
+                                                    <i class="bi bi-arrow-clockwise"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-  <!-- Footer -->
-  <footer-component></footer-component>
+                <!-- Sidebar -->
+                <div class="col-lg-3">
+                    
+                    <!-- Filtros Rápidos -->
+                    <div class="sidebar-widget">
+                        <h6><i class="bi bi-funnel"></i> Filtros Rápidos</h6>
+                        <div class="d-grid gap-2 mt-3">
+                            <button class="btn btn-outline-primary btn-sm" onclick="filterToday()">
+                                <i class="bi bi-calendar-day"></i> Hoje
+                            </button>
+                            <button class="btn btn-outline-success btn-sm" onclick="filterWeek()">
+                                <i class="bi bi-calendar-week"></i> Esta semana
+                            </button>
+                            <button class="btn btn-outline-warning btn-sm" onclick="filterMonth()">
+                                <i class="bi bi-calendar-month"></i> Este mês
+                            </button>
+                            <button class="btn btn-outline-danger btn-sm" onclick="resetFilters()">
+                                <i class="bi bi-arrow-counterclockwise"></i> Limpar
+                            </button>
+                        </div>
+                    </div>
 
-  <script src="https://kit.fontawesome.com/b05eb750d3.js" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+                    <!-- Alertas -->
+                    <div class="alert-widget">
+                        <h6><i class="bi bi-exclamation-triangle"></i> Alertas</h6>
+                        <div class="alert alert-warning alert-sm">
+                            <strong>Atenção:</strong> Temperatura acima do normal às 14:30
+                        </div>
+                        <div class="alert alert-info alert-sm">
+                            <strong>Info:</strong> Umidade dentro da faixa ideal
+                        </div>
+                        <div class="alert alert-success alert-sm">
+                            <strong>OK:</strong> Sistema funcionando normalmente
+                        </div>
+                    </div>
+
+                    <!-- Estatísticas -->
+                    <div class="sidebar-widget">
+                        <h6><i class="bi bi-calculator"></i> Estatísticas</h6>
+                        <div class="stats-list mt-3">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Temp. Média:</span>
+                                <span class="fw-bold text-danger">22.8°C</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Temp. Máx:</span>
+                                <span class="fw-bold text-danger">28.5°C</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Umidade Média:</span>
+                                <span class="fw-bold text-primary">62%</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Vel. Média:</span>
+                                <span class="fw-bold text-success">10.2 cm/s</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Uptime:</span>
+                                <span class="fw-bold text-warning">98.5%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exportar Dados -->
+                    <div class="sidebar-widget">
+                        <h6><i class="bi bi-download"></i> Exportar</h6>
+                        <div class="d-grid gap-2 mt-3">
+                            <button class="btn btn-outline-primary btn-sm" onclick="exportCSV()">
+                                <i class="bi bi-filetype-csv"></i> CSV
+                            </button>
+                            <button class="btn btn-outline-success btn-sm" onclick="exportExcel()">
+                                <i class="bi bi-file-excel"></i> Excel
+                            </button>
+                            <button class="btn btn-outline-danger btn-sm" onclick="exportPDF()">
+                                <i class="bi bi-file-pdf"></i> PDF
+                            </button>
+                            <button class="btn btn-outline-warning btn-sm" onclick="exportImage()">
+                                <i class="bi bi-image"></i> Imagem
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer-component></footer-component>
+    
+    <script src="https://kit.fontawesome.com/b05eb750d3.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/pagina_graficos.js"></script>
 </body>
 </html>

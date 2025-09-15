@@ -1,46 +1,337 @@
+/* ===== MODO CLARO (PADRÃO) ===== */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-        body {
-            background-color: #f8f9fa;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+.hero-section {
+    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%) !important;
+    color: white !important;
+    padding: 60px 0 !important;
+    transition: background 0.3s ease;
+}
 
-        .hero-section {
-            background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
-            color: white;
-            padding: 60px 0;
-        }
+.hero-section h1,
+.hero-section p,
+.hero-section .lead {
+    color: white !important;
+}
 
-        .sensor-card {
-            border: none;
-            border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
+/* Stats Cards */
+.stats-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    background: white;
+}
 
-        .sensor-card:hover {
-            transform: translateY(-5px);
-        }
+.stats-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
 
-        .sensor-value {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin: 10px 0;
-        }
+/* Chart Cards */
+.chart-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+    overflow: hidden;
+}
 
-        .chart-container {
-            background: white;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-        }
+.chart-card .card-header {
+    border: none;
+    font-weight: 600;
+}
 
-        .status-online {
-            color: #198754;
-        }
+.chart-card .card-body {
+    padding: 25px;
+}
 
-        .update-time {
-            color: #6c757d;
-            font-size: 0.9rem;
-        }
-   
+/* Sidebar Widgets */
+.sidebar-widget {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 25px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sidebar-widget h6 {
+    color: #495057;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Alert Widget */
+.alert-widget {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 25px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.alert-widget h6 {
+    color: #495057;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.alert-sm {
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    font-size: 0.875rem;
+}
+
+/* Stats List */
+.stats-list {
+    font-size: 0.9rem;
+}
+
+.stats-list span {
+    color: #6c757d;
+}
+
+/* Form Controls */
+.form-select {
+    border-radius: 10px;
+    border: 1px solid #dee2e6;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* Buttons */
+.btn {
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-sm {
+    border-radius: 8px;
+}
+
+/* ===== MODO DARK ===== */
+
+/* Body no modo dark */
+[data-bs-theme="dark"] body {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+}
+
+/* Hero section no modo dark */
+[data-bs-theme="dark"] .hero-section {
+    background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%) !important;
+    color: white !important;
+}
+
+[data-bs-theme="dark"] .hero-section h1,
+[data-bs-theme="dark"] .hero-section p,
+[data-bs-theme="dark"] .hero-section .lead {
+    color: white !important;
+}
+
+/* Stats Cards no modo dark */
+[data-bs-theme="dark"] .stats-card {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+    box-shadow: 0 8px 25px rgba(255,255,255,0.05) !important;
+}
+
+[data-bs-theme="dark"] .stats-card:hover {
+    box-shadow: 0 12px 30px rgba(255,255,255,0.1) !important;
+}
+
+[data-bs-theme="dark"] .stats-card .card-body {
+    color: #ffffff !important;
+}
+
+[data-bs-theme="dark"] .stats-card .card-title {
+    color: #ffffff !important;
+}
+
+/* Chart Cards no modo dark */
+[data-bs-theme="dark"] .chart-card {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+    box-shadow: 0 8px 25px rgba(255,255,255,0.05) !important;
+}
+
+[data-bs-theme="dark"] .chart-card .card-body {
+    color: #ffffff !important;
+}
+
+[data-bs-theme="dark"] .chart-card .card-header {
+    border-bottom: 1px solid #333 !important;
+}
+
+/* Sidebar Widgets no modo dark */
+[data-bs-theme="dark"] .sidebar-widget {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+    box-shadow: 0 8px 25px rgba(255,255,255,0.05) !important;
+}
+
+[data-bs-theme="dark"] .sidebar-widget h6 {
+    color: #ffffff !important;
+}
+
+/* Alert Widget no modo dark */
+[data-bs-theme="dark"] .alert-widget {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+    box-shadow: 0 8px 25px rgba(255,255,255,0.05) !important;
+}
+
+[data-bs-theme="dark"] .alert-widget h6 {
+    color: #ffffff !important;
+}
+
+/* Alerts no modo dark */
+[data-bs-theme="dark"] .alert-warning {
+    background-color: #2d2416 !important;
+    border-color: #3d3018 !important;
+    color: #ffda6a !important;
+}
+
+[data-bs-theme="dark"] .alert-info {
+    background-color: #1a2332 !important;
+    border-color: #233042 !important;
+    color: #6ea8fe !important;
+}
+
+[data-bs-theme="dark"] .alert-success {
+    background-color: #1a2e1a !important;
+    border-color: #234423 !important;
+    color: #75dd7a !important;
+}
+
+/* Stats List no modo dark */
+[data-bs-theme="dark"] .stats-list span {
+    color: #aaaaaa !important;
+}
+
+/* Form Controls no modo dark */
+[data-bs-theme="dark"] .form-select {
+    background-color: #2d2d2d !important;
+    border-color: #444444 !important;
+    color: #ffffff !important;
+}
+
+[data-bs-theme="dark"] .form-select:focus {
+    background-color: #2d2d2d !important;
+    border-color: #0d6efd !important;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25) !important;
+    color: #ffffff !important;
+}
+
+[data-bs-theme="dark"] .form-label {
+    color: #ffffff !important;
+}
+
+/* Botões outline no modo dark */
+[data-bs-theme="dark"] .btn-outline-primary {
+    color: #6ea8fe !important;
+    border-color: #6ea8fe !important;
+}
+
+[data-bs-theme="dark"] .btn-outline-primary:hover {
+    background-color: #6ea8fe !important;
+    border-color: #6ea8fe !important;
+    color: #000000 !important;
+}
+
+[data-bs-theme="dark"] .btn-outline-success {
+    color: #75dd7a !important;
+    border-color: #75dd7a !important;
+}
+
+[data-bs-theme="dark"] .btn-outline-success:hover {
+    background-color: #75dd7a !important;
+    border-color: #75dd7a !important;
+    color: #000000 !important;
+}
+
+[data-bs-theme="dark"] .btn-outline-danger {
+    color: #ea868f !important;
+    border-color: #ea868f !important;
+}
+
+[data-bs-theme="dark"] .btn-outline-danger:hover {
+    background-color: #ea868f !important;
+    border-color: #ea868f !important;
+    color: #000000 !important;
+}
+
+[data-bs-theme="dark"] .btn-outline-warning {
+    color: #ffda6a !important;
+    border-color: #ffda6a !important;
+}
+
+[data-bs-theme="dark"] .btn-outline-warning:hover {
+    background-color: #ffda6a !important;
+    border-color: #ffda6a !important;
+    color: #000000 !important;
+}
+
+/* Text colors no modo dark */
+[data-bs-theme="dark"] .text-muted {
+    color: #aaaaaa !important;
+}
+
+/* Badges especiais no modo dark */
+[data-bs-theme="dark"] .badge.bg-light {
+    background-color: #2d2d2d !important;
+    color: #ffffff !important;
+}
+
+/* Garantir que textos fiquem visíveis */
+[data-bs-theme="dark"] h1,
+[data-bs-theme="dark"] h2,
+[data-bs-theme="dark"] h3,
+[data-bs-theme="dark"] h4,
+[data-bs-theme="dark"] h5,
+[data-bs-theme="dark"] h6 {
+    color: #ffffff !important;
+}
+
+[data-bs-theme="dark"] p {
+    color: #cccccc !important;
+}
+
+/* Cards headers com cores específicas mantêm suas cores */
+[data-bs-theme="dark"] .card-header.bg-primary,
+[data-bs-theme="dark"] .card-header.bg-success,
+[data-bs-theme="dark"] .card-header.bg-danger,
+[data-bs-theme="dark"] .card-header.bg-warning,
+[data-bs-theme="dark"] .card-header.bg-secondary {
+    /* Mantém as cores originais dos headers */
+}
+
+/* Scrollbar personalizada no modo dark */
+[data-bs-theme="dark"] ::-webkit-scrollbar {
+    width: 8px;
+}
+
+[data-bs-theme="dark"] ::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+[data-bs-theme="dark"] ::-webkit-scrollbar-thumb {
+    background: #444444;
+    border-radius: 4px;
+}
+
+[data-bs-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+    background: #555555;
+}

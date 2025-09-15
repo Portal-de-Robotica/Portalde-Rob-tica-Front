@@ -94,8 +94,8 @@ footerTemplate.innerHTML = `
   <footer class="bg-primary text-white py-2 mt-5">
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
-          <h5><i class="bi bi-robot"></i> Tandron IoT</h5>
+        <div class="col-md-6 mt-2">
+          <h5><i class="bi bi-robot "></i> Tandron IoT</h5>
           <p>Sistema de monitoramento inteligente para robótica educacional</p>
         </div>
         <div class="col-md-6 text-md-end">
