@@ -7,6 +7,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.min.js" defer></script>
+  <link rel="stylesheet" href="../css/home.css">
 </head>
 <body>
 
@@ -16,63 +17,69 @@
   <!-- Navbar -->
   <navbar-component></navbar-component>
 
-  <!-- Conteúdo principal que muda em cada página -->
+  <!-- Conteúdo principal -->
   <main class="container mt-4">
-    <section class="hero-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h1 class="display-4 fw-bold mb-3">
-                        <i class="bi bi-bar-chart-line"></i> 
-                    </h1>
-                    <p class="lead">A Tandron IoT Robotics é um projeto educacional que promove a aprendizagem prática de robótica e IoT, incentivando
-                         estudantes a desenvolverem habilidades técnicas por meio de projetos com sensores, análise de dados e trabalho em equipe.</p>  
-                </div>
-            </div>
-        </div>
+
+    <!-- Hero Section com imagem de fundo -->
+    <section class="hero-section text-center mb-5">
+      <div class="container">
+        <h1 class="display-4 fw-bold mb-3">
+          <i class="bi bi-bar-chart-line"></i> Tandron IoT Robotics
+        </h1>
+        <p class="lead mb-4">
+          Um projeto educacional que promove a aprendizagem prática de robótica e IoT, incentivando
+          estudantes a desenvolverem habilidades técnicas por meio de projetos com sensores, análise de dados e trabalho em equipe.
+        </p>
+        <a href="#" class="btn btn-dark btn-lg">Saiba Mais</a>
+      </div>
     </section>
-    <section class="container mt-5">
-  <h1 class="text-center mb-4">O que você encontra aqui?</h1>
-  <div class="row g-4">
-    <!-- Card Vídeos -->
-    <div class="col-md-4">
-      <div class="card h-100 shadow-sm text-center p-4 d-flex flex-column align-items-center">
-        <i class="fa-solid fa-video fa-3x text-primary mb-3"></i>
-        <div class="card-body">
-          <h2 class="h5">Vídeos</h2>
-          <p class="card-text">Assista vídeos sobre nosso projeto em andamento, sobre IoT.</p>
+
+    <!-- Cards -->
+    <section class="container mb-5">
+      <h2 class="text-center mb-4">O que você encontra aqui?</h2>
+      <div class="row g-4 justify-content-center">
+
+        <!-- Card Vídeos -->
+        <div class="col-sm-6 col-lg-4">
+          <a href="videos.html" class="text-decoration-none">
+            <div class="card hover-card text-center p-4 h-100 shadow-sm">
+              <i class="fa-solid fa-video fa-3x text-primary mb-3"></i>
+              <div class="card-body">
+                <h5 class="card-title">Vídeos</h5>
+                <p class="card-text">Assista vídeos sobre nosso projeto em andamento, sobre IoT.</p>
+              </div>
+            </div>
+          </a>
         </div>
-      </div>
-    </div>
 
-    <!-- Card Gráficos -->
-    <div class="col-md-4">
-      <div class="card h-100 shadow-sm text-center p-4 d-flex flex-column align-items-center">
-        <i class="fa-solid fa-chart-simple fa-3x text-success mb-3"></i>
-        <div class="card-body">
-          <h2 class="h5">Gráficos</h2>
-          <p class="card-text">Acompanhe os dados em tempo real coletados pelos nossos sensores do projeto.</p>
+        <!-- Card Gráficos -->
+        <div class="col-sm-6 col-lg-4">
+          <a href="pagina_graficos.html" class="text-decoration-none">
+            <div class="card hover-card text-center p-4 h-100 shadow-sm">
+              <i class="fa-solid fa-chart-simple fa-3x text-success mb-3"></i>
+              <div class="card-body">
+                <h5 class="card-title">Gráficos</h5>
+                <p class="card-text">Acompanhe os dados em tempo real coletados pelos nossos sensores do projeto.</p>
+              </div>
+            </div>
+          </a>
         </div>
-      </div>
-    </div>
 
-    <!-- Card Ranking -->
-    <div class="col-md-4">
-      <div class="card h-100 shadow-sm text-center p-4 d-flex flex-column align-items-center">
-        <i class="fa-solid fa-ranking-star fa-3x text-warning mb-3"></i>
-        <div class="card-body">
-          <h2 class="h5">Ranking</h2>
-          <p class="card-text">Veja a classificação e o desempenho das equipes no projeto.</p>
+        <!-- Card Ranking -->
+        <div class="col-sm-6 col-lg-4">
+          <a href="ranking.html" class="text-decoration-none">
+            <div class="card hover-card text-center p-4 h-100 shadow-sm">
+              <i class="fa-solid fa-ranking-star fa-3x text-warning mb-3"></i>
+              <div class="card-body">
+                <h5 class="card-title">Ranking</h5>
+                <p class="card-text">Veja a classificação e o desempenho das equipes no projeto.</p>
+              </div>
+            </div>
+          </a>
         </div>
+
       </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
+    </section>
 
   </main>
 

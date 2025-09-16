@@ -1,0 +1,80 @@
+/* ===== Hero Section com Sobreposição ===== */
+.hero-section {
+  position: relative;
+  background-image: url('../img/n1.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 120px 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* sobreposição escura */
+  border-radius: 10px;
+  z-index: 0;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+}
+
+/* Botão Hero */
+.hero-section .btn {
+  border: 2px solid white;
+  color: white;
+  background-color: rgba(0,0,0,0.4);
+  transition: all 0.3s;
+}
+
+.hero-section .btn:hover {
+  background-color: rgba(255,255,255,0.2);
+  transform: scale(1.05);
+}
+
+/* ===== Cards ===== */
+.hover-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  background-color: rgba(30,30,30,0.95);
+  color: white;
+  padding: 2rem 1rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.hover-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 20px 30px rgba(0,0,0,0.5);
+}
+
+.hover-card i {
+  transition: transform 0.3s ease, color 0.3s ease;
+  font-size: 3rem;
+}
+
+.hover-card:hover i {
+  transform: scale(1.3);
+  filter: brightness(1.5);
+}
+
+/* ===== Seções ===== */
+section {
+  margin-bottom: 60px;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 80px 15px;
+  }
+
+  .hover-card {
+    padding: 1.5rem;
+  }
+}
