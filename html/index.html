@@ -1,93 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tandron IoT - Página Vídeos</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" rel="stylesheet" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.min.js" defer></script>
-  <link rel="stylesheet" href="../css/home.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tandron IoT - Página Vídeos</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.min.js"
+      defer
+    ></script>
+    <link rel="stylesheet" href="../css/home.css" />
+  </head>
+  <body>
+    <!-- Importa o componente -->
+    <script type="module" src="../js/components.js"></script>
 
-  <!-- Importa o componente -->
-  <script type="module" src="../js/components.js"></script>
+    <!-- Navbar -->
+    <navbar-component></navbar-component>
 
-  <!-- Navbar -->
-  <navbar-component></navbar-component>
-
-  <!-- Conteúdo principal -->
-  <main class="container mt-4">
-
-    <!-- Hero Section com imagem de fundo -->
-    <section class="hero-section text-center mb-5">
-      <div class="container">
-        <h1 class="display-4 fw-bold mb-3">
-          <i class="bi bi-bar-chart-line"></i> Tandron IoT Robotics
-        </h1>
-        <p class="lead mb-4">
-          Um projeto educacional que promove a aprendizagem prática de robótica e IoT, incentivando
-          estudantes a desenvolverem habilidades técnicas por meio de projetos com sensores, análise de dados e trabalho em equipe.
-        </p>
-        <a href="#" class="btn btn-dark btn-lg">Saiba Mais</a>
-      </div>
-    </section>
-
-    <!-- Cards -->
-    <section class="container mb-5">
-      <h2 class="text-center mb-4">O que você encontra aqui?</h2>
-      <div class="row g-4 justify-content-center">
-
-        <!-- Card Vídeos -->
-        <div class="col-sm-6 col-lg-4">
-          <a href="videos.html" class="text-decoration-none">
-            <div class="card hover-card text-center p-4 h-100 shadow-sm">
-              <i class="fa-solid fa-video fa-3x text-primary mb-3"></i>
-              <div class="card-body">
-                <h5 class="card-title">Vídeos</h5>
-                <p class="card-text">Assista vídeos sobre nosso projeto em andamento, sobre IoT.</p>
-              </div>
-            </div>
-          </a>
+    <!-- Conteúdo principal -->
+    <main class="container mt-4">
+      <!-- Hero Section com imagem de fundo -->
+      <section class="hero-section text-center mb-5">
+        <div class="container">
+          <h1 class="display-4 fw-bold mb-3">
+            <i class="bi bi-bar-chart-line"></i> Tandron IoT Robotics
+          </h1>
+          <p class="lead mb-4">
+            Um projeto educacional que promove a aprendizagem prática de
+            robótica e IoT, incentivando estudantes a desenvolverem habilidades
+            técnicas por meio de projetos com sensores, análise de dados e
+            trabalho em equipe.
+          </p>
+          <a href="#" class="btn btn-dark btn-lg">Saiba Mais</a>
         </div>
+      </section>
 
-        <!-- Card Gráficos -->
-        <div class="col-sm-6 col-lg-4">
-          <a href="pagina_graficos.html" class="text-decoration-none">
-            <div class="card hover-card text-center p-4 h-100 shadow-sm">
-              <i class="fa-solid fa-chart-simple fa-3x text-success mb-3"></i>
-              <div class="card-body">
-                <h5 class="card-title">Gráficos</h5>
-                <p class="card-text">Acompanhe os dados em tempo real coletados pelos nossos sensores do projeto.</p>
+      <!-- Cards -->
+      <section class="container mb-5">
+        <h2 class="text-center mb-4">O que você encontra aqui?</h2>
+        <div class="row g-4 justify-content-center">
+          <!-- Card Vídeos -->
+          <div class="col-sm-6 col-lg-4">
+            <a href="videos.html" class="text-decoration-none">
+              <div class="card hover-card text-center p-4 h-100 shadow-sm">
+                <i class="fa-solid fa-video fa-3x text-primary mb-3"></i>
+                <div class="card-body">
+                  <h5 class="card-title">Vídeos</h5>
+                  <p class="card-text">
+                    Assista vídeos sobre nosso projeto em andamento, sobre IoT.
+                  </p>
+                </div>
               </div>
-            </div>
-          </a>
-        </div>
+            </a>
+          </div>
 
-        <!-- Card Ranking -->
-        <div class="col-sm-6 col-lg-4">
-          <a href="ranking.html" class="text-decoration-none">
-            <div class="card hover-card text-center p-4 h-100 shadow-sm">
-              <i class="fa-solid fa-ranking-star fa-3x text-warning mb-3"></i>
-              <div class="card-body">
-                <h5 class="card-title">Ranking</h5>
-                <p class="card-text">Veja a classificação e o desempenho das equipes no projeto.</p>
+          <!-- Card Gráficos -->
+          <div class="col-sm-6 col-lg-4">
+            <a href="pagina_graficos.html" class="text-decoration-none">
+              <div class="card hover-card text-center p-4 h-100 shadow-sm">
+                <i class="fa-solid fa-chart-simple fa-3x text-success mb-3"></i>
+                <div class="card-body">
+                  <h5 class="card-title">Gráficos</h5>
+                  <p class="card-text">
+                    Acompanhe os dados em tempo real coletados pelos nossos
+                    sensores do projeto.
+                  </p>
+                </div>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
+
+          <!-- Card Noticias -->
+          <div class="col-sm-6 col-lg-4">
+            <a href="pagina_noticias.html" class="text-decoration-none">
+              <div class="card hover-card text-center p-4 h-100 shadow-sm">
+                <i class="fa-solid fa-newspaper fa-3x text-warning mb-3"></i>
+                <div class="card-body">
+                  <h5 class="card-title">Notícias</h5>
+                  <p class="card-text">
+                    Veja as últimas notícias sobre IoT e tecnologia.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Card Ranking -->
+          <div class="col-sm-6 col-lg-4">
+            <a href="ranking.html" class="text-decoration-none">
+              <div class="card hover-card text-center p-4 h-100 shadow-sm">
+                <i class="fa-solid fa-ranking-star fa-3x text-warning mb-3"></i>
+                <div class="card-body">
+                  <h5 class="card-title">Ranking</h5>
+                  <p class="card-text">
+                    Veja a classificação e o desempenho das equipes no projeto.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
+      </section>
+    </main>
 
-      </div>
-    </section>
+    <!-- Footer -->
+    <footer-component></footer-component>
 
-  </main>
-
-  <!-- Footer -->
-  <footer-component></footer-component>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-  <script src="https://kit.fontawesome.com/b05eb750d3.js" crossorigin="anonymous"></script>
-
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/b05eb750d3.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

@@ -1,89 +1,37 @@
-// Mantém todos os gráficos organizados em um objeto
-const charts = {};
+// JavaScript básico para gráficos
 
-// =====================
-// Funções de geração de dados fictícios
-// =====================
-function generateTemperatureData() {
-  return {
-    labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun"],
-    data: [22, 24, 27, 23, 20, 18]
-  };
-}
-
-function generateHumidityData() {
-  return {
-    labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun"],
-    data: [55, 60, 62, 58, 65, 70]
-  };
-}
-
-function generateSpeedData() {
-  return {
-    labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun"],
-    data: [12, 15, 14, 18, 16, 20]
-  };
-}
-
-function generatePieData() {
-  return {
-    labels: ["Temperatura", "Umidade", "Velocidade"],
-    data: [30, 40, 30]
-  };
-}
-
-function generateBarData() {
-  return {
-    labels: ["Sensor A", "Sensor B", "Sensor C", "Sensor D"],
-    data: [12, 19, 8, 15]
-  };
-}
-
-// =====================
-// Criação dos gráficos
-// =====================
+// Dados fictícios simples
 function createRealtimeChart() {
   const ctx = document.getElementById("realtimeChart");
   if (!ctx) return;
 
-  const tempData = generateTemperatureData();
-  const humidityData = generateHumidityData();
-  const speedData = generateSpeedData();
-
-  charts.realtime = new Chart(ctx, {
+  new Chart(ctx, {
     type: "line",
     data: {
-      labels: tempData.labels,
+      labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun"],
       datasets: [
         {
           label: "Temperatura (°C)",
-          data: tempData.data,
+          data: [22, 24, 27, 23, 20, 18],
           borderColor: "red",
-          backgroundColor: "rgba(255,0,0,0.2)",
-          tension: 0.4
+          backgroundColor: "rgba(255,0,0,0.1)"
         },
         {
           label: "Umidade (%)",
-          data: humidityData.data,
+          data: [55, 60, 62, 58, 65, 70],
           borderColor: "blue",
-          backgroundColor: "rgba(0,0,255,0.2)",
-          tension: 0.4
+          backgroundColor: "rgba(0,0,255,0.1)"
         },
         {
           label: "Velocidade (cm/s)",
-          data: speedData.data,
+          data: [12, 15, 14, 18, 16, 20],
           borderColor: "green",
-          backgroundColor: "rgba(0,255,0,0.2)",
-          tension: 0.4
+          backgroundColor: "rgba(0,255,0,0.1)"
         }
       ]
     },
     options: {
-      responsive: true,
-      plugins: {
-        legend: { position: "top" },
-        title: { display: true, text: "Monitoramento em Tempo Real" }
-      }
+      responsive: true
     }
   });
 }
@@ -92,25 +40,19 @@ function createTemperatureChart() {
   const ctx = document.getElementById("temperatureChart");
   if (!ctx) return;
 
-  const data = generateTemperatureData();
-
-  charts.temperature = new Chart(ctx, {
+  new Chart(ctx, {
     type: "line",
     data: {
-      labels: data.labels,
-      datasets: [
-        {
-          label: "Temperatura (°C)",
-          data: data.data,
-          borderColor: "orange",
-          backgroundColor: "rgba(255,165,0,0.2)",
-          tension: 0.4
-        }
-      ]
+      labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun"],
+      datasets: [{
+        label: "Temperatura (°C)",
+        data: [22, 24, 27, 23, 20, 18],
+        borderColor: "orange",
+        backgroundColor: "rgba(255,165,0,0.1)"
+      }]
     },
     options: {
-      responsive: true,
-      plugins: { title: { display: true, text: "Temperatura ao longo do tempo" } }
+      responsive: true
     }
   });
 }
@@ -119,25 +61,19 @@ function createHumidityChart() {
   const ctx = document.getElementById("humidityChart");
   if (!ctx) return;
 
-  const data = generateHumidityData();
-
-  charts.humidity = new Chart(ctx, {
+  new Chart(ctx, {
     type: "line",
     data: {
-      labels: data.labels,
-      datasets: [
-        {
-          label: "Umidade (%)",
-          data: data.data,
-          borderColor: "blue",
-          backgroundColor: "rgba(0,0,255,0.2)",
-          tension: 0.4
-        }
-      ]
+      labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun"],
+      datasets: [{
+        label: "Umidade (%)",
+        data: [55, 60, 62, 58, 65, 70],
+        borderColor: "blue",
+        backgroundColor: "rgba(0,0,255,0.1)"
+      }]
     },
     options: {
-      responsive: true,
-      plugins: { title: { display: true, text: "Umidade ao longo do tempo" } }
+      responsive: true
     }
   });
 }
@@ -146,22 +82,17 @@ function createPieChart() {
   const ctx = document.getElementById("pieChart");
   if (!ctx) return;
 
-  const data = generatePieData();
-
-  charts.pie = new Chart(ctx, {
+  new Chart(ctx, {
     type: "pie",
     data: {
-      labels: data.labels,
-      datasets: [
-        {
-          data: data.data,
-          backgroundColor: ["red", "blue", "green"]
-        }
-      ]
+      labels: ["Temperatura", "Umidade", "Velocidade"],
+      datasets: [{
+        data: [30, 40, 30],
+        backgroundColor: ["red", "blue", "green"]
+      }]
     },
     options: {
-      responsive: true,
-      plugins: { title: { display: true, text: "Distribuição de Variáveis" } }
+      responsive: true
     }
   });
 }
@@ -170,34 +101,72 @@ function createBarChart() {
   const ctx = document.getElementById("barChart");
   if (!ctx) return;
 
-  const data = generateBarData();
-
-  charts.bar = new Chart(ctx, {
+  new Chart(ctx, {
     type: "bar",
     data: {
-      labels: data.labels,
-      datasets: [
-        {
-          label: "Medições",
-          data: data.data,
-          backgroundColor: "purple"
-        }
-      ]
+      labels: ["Sensor A", "Sensor B", "Sensor C", "Sensor D"],
+      datasets: [{
+        label: "Medições",
+        data: [12, 19, 8, 15],
+        backgroundColor: "purple"
+      }]
     },
     options: {
-      responsive: true,
-      plugins: { title: { display: true, text: "Medições por Sensor" } }
+      responsive: true
     }
   });
 }
 
-// =====================
-// Inicializa tudo quando a página carregar
-// =====================
-window.addEventListener("DOMContentLoaded", () => {
+// Inicializar quando a página carregar
+window.addEventListener("DOMContentLoaded", function() {
   createRealtimeChart();
   createTemperatureChart();
   createHumidityChart();
   createPieChart();
   createBarChart();
 });
+
+// Funções básicas para os botões (só para não dar erro)
+function startAutoUpdate() {
+  alert("Função de atualização automática");
+}
+
+function stopAutoUpdate() {
+  alert("Parou a atualização automática");
+}
+
+function refreshCharts() {
+  location.reload();
+}
+
+function filterToday() {
+  alert("Filtro: Hoje");
+}
+
+function filterWeek() {
+  alert("Filtro: Esta semana");
+}
+
+function filterMonth() {
+  alert("Filtro: Este mês");
+}
+
+function resetFilters() {
+  alert("Filtros limpos");
+}
+
+function exportCSV() {
+  alert("Exportar CSV");
+}
+
+function exportExcel() {
+  alert("Exportar Excel");
+}
+
+function exportPDF() {
+  alert("Exportar PDF");
+}
+
+function exportImage() {
+  alert("Exportar Imagem");
+}
