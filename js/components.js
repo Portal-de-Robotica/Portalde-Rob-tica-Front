@@ -13,10 +13,10 @@ navbarTemplate.innerHTML = `
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="../html/index.html"><i class="bi bi-house"></i> Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-play-circle"></i> Vídeos</a></li>
+          <li class="nav-item"><a class="nav-link" href="../html/videos.html><i class="bi bi-play-circle"></i> Vídeos</a></li>
           <li class="nav-item"><a class="nav-link" href="../html/pagina_graficos.html"><i class="bi bi-graph-up"></i> Gráficos</a></li>
           <li class="nav-item"><a class="nav-link" href="../html/pagina_noticias.html"><i class="bi bi-newspaper"></i> Notícias</a></li>
-          <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-trophy"></i> Ranking</a></li>
+          <li class="nav-item"><a class="nav-link" href="../html/ranking.html"><i class="bi bi-trophy"></i> Ranking</a></li>
           <li class="nav-item"><a class="nav-link" href="../html/contato.html"><i class="bi bi-chat-left-text"></i> Contato</a></li>
           
           <!-- Botão do Modo Dark -->
