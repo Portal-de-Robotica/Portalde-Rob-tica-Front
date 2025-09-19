@@ -18,25 +18,114 @@
   <navbar-component></navbar-component>
 
   <!-- Conteúdo principal -->
-  <main class="container mt-4">
+    <main class="container mt-4">
+  <!-- Título da página -->
+  <h1 class="text-center mb-4">
+    <i class="bi bi-camera-reels"></i> Vídeos do Robozinho
+  </h1>
 
-    <!-- Hero Section com imagem de fundo -->
-    <section class="hero-section text-center mb-5">
-      <div class="container">
-        <h1 class="display-4 fw-bold mb-3">
-          <i class="bi bi-bar-chart-line"></i> Tandron IoT Robotics
-        </h1>
-        <p class="lead mb-4">
-          Um projeto educacional que promove a aprendizagem prática de robótica e IoT, incentivando
-          estudantes a desenvolverem habilidades técnicas por meio de projetos com sensores, análise de dados e trabalho em equipe.
-        </p>
-        <a href="#" class="btn btn-dark btn-lg">Saiba Mais</a>
+ <!-- Carrossel de vídeos -->
+<div id="carouselVideos" class="carousel slide mb-5" data-bs-ride="carousel" data-bs-interval="4000">
+  <div class="carousel-inner">
+
+    <!-- Vídeo 1 -->
+    <div class="carousel-item active">
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" 
+                title="Robozinho em ação" 
+                allowfullscreen></iframe>
       </div>
-    </section>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Robozinho em movimento</h5>
+        <p>Testes iniciais do projeto com sensores de movimento.</p>
+      </div>
+    </div>
 
-    </section>
+    <!-- Vídeo 2 -->
+    <div class="carousel-item">
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/ysz5S6PUM-U" 
+                title="Robozinho IoT" 
+                allowfullscreen></iframe>
+      </div>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Controle via IoT</h5>
+        <p>Mostrando como o robô é controlado pelo celular.</p>
+      </div>
+    </div>
 
-  </main>
+    <!-- Vídeo 3 -->
+    <div class="carousel-item">
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/aqz-KE-bpKQ" 
+                title="Robozinho com sensores" 
+                allowfullscreen></iframe>
+      </div>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Robozinho com sensores</h5>
+        <p>Funcionamento dos sensores em tempo real.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controles -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselVideos" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselVideos" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+  <!-- Lista de outros vídeos -->
+  <h2 class="mb-4"><i class="bi bi-collection-play"></i> Outros vídeos</h2>
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm">
+        <div class="ratio ratio-16x9">
+          <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen></iframe>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Teste com sensores</h5>
+          <p class="card-text">O robô desviando de obstáculos com sensores ultrassônicos.</p>
+          <p class="text-muted"><i class="bi bi-calendar-event"></i> 15/09/2025</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm">
+        <div class="ratio ratio-16x9">
+          <iframe src="https://www.youtube.com/embed/ysz5S6PUM-U" allowfullscreen></iframe>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Controle remoto via app</h5>
+          <p class="card-text">Apresentação do controle do robô através de aplicativo.</p>
+          <p class="text-muted"><i class="bi bi-calendar-event"></i> 10/09/2025</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm">
+        <div class="ratio ratio-16x9">
+          <iframe src="https://www.youtube.com/embed/aqz-KE-bpKQ" allowfullscreen></iframe>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Robozinho em competição</h5>
+          <p class="card-text">O robô participando de uma competição de velocidade.</p>
+          <p class="text-muted"><i class="bi bi-calendar-event"></i> 05/09/2025</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
 
   <!-- Footer -->
   <footer-component></footer-component>
