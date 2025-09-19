@@ -78,3 +78,31 @@ section {
     padding: 1.5rem;
   }
 }
+/* ===== Cards - adapta ao tema do sistema ===== */
+@media (prefers-color-scheme: light) {
+  .hover-card {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .hover-card {
+    background-color: rgba(30,30,30,0.95);
+    color: white;
+  }
+}
+/* Hover Cards */
+[data-bs-theme="dark"] .hover-card {
+  background-color: #212529 !important; /* escuro */
+  color: white !important;
+  border: 1px solid #495057 !important;
+}
+
+[data-bs-theme="light"] .hover-card {
+  background-color: #c7c3c3 !important; /* branco */
+  color: #000000 !important;
+  border: 1px solid #dee2e6 !important;
+}
+
+
