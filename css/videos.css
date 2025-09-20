@@ -1,8 +1,49 @@
+/* =======================
+   Cards de vídeos aprimorados
+   ======================= */
 .card {
+  background-color: #fff;
+  color: #212529;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+}
+
+/* Corpo do card */
+.card-body h5 {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-body p {
+  color: #495057;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-body .text-muted {
+  font-size: 0.85rem;
+}
+
+/* Vídeo dentro do card */
+.card .ratio {
+  overflow: hidden;
+}
+
+.card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantém proporção 16:9 sem distorcer */
+  transition: transform 0.3s ease;
+}
+
+.card video:hover {
+  transform: scale(1.03);
 }
