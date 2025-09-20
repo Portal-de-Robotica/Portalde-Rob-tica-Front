@@ -47,15 +47,27 @@
 .card video:hover {
   transform: scale(1.03);
 }
+
+[data-bs-theme="light"] body {
+  background-color: #dddddd !important; 
+}
+[data-bs-theme="light"] .carousel-inner {
+  background-color: #c0c3c9 !important; 
+}
+[data-bs-theme="dark"] .carousel-inner {
+  background-color: #1b1c1d !important; 
+}
+
 [data-bs-theme="dark"] .card {
-  background-color: #212529 !important; /* escuro */
+  background-color: #212529 !important; 
   color: white !important;
   border: 1px solid #495057 !important;
 }
 
 [data-bs-theme="light"] .card{
-  background-color: #c7c3c3 !important; /* branco */
+  background-color: #c7c3c3 !important; 
   color: #000000 !important;
   border: 1px solid #dee2e6 !important;
+  color: #000000;
 }
 

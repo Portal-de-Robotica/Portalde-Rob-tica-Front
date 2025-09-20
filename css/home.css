@@ -94,15 +94,15 @@ section {
 }
 /* Hover Cards */
 [data-bs-theme="dark"] .hover-card {
-  background-color: #212529 !important; /* escuro */
+  background-color: #1a1b1d !important; /* escuro */
   color: white !important;
-  border: 1px solid #495057 !important;
+  border: 1.4px solid #0e2053 !important;
 }
 
 [data-bs-theme="light"] .hover-card {
-  background-color: #c7c3c3 !important; /* branco */
+  background-color: #ebe4e4 !important; /* branco */
   color: #000000 !important;
-  border: 1px solid #dee2e6 !important;
+  border: 1px solid #aaa6a6 !important;
 }
 
 
