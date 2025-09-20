@@ -7,7 +7,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.min.js" defer></script>
-  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/videos.css">
 </head>
 <body>
 
@@ -21,7 +21,7 @@
     <main class="container mt-4">
   <!-- Título da página -->
   <h1 class="text-center mb-4">
-    <i class="bi bi-camera-reels"></i> Vídeos do Robozinho
+    <i class="bi bi-camera-reels"></i> Vídeos dos Projetos
   </h1>
 
  <!-- Carrossel de vídeos -->
@@ -31,42 +31,49 @@
     <!-- Vídeo 1 -->
     <div class="carousel-item active">
       <div class="ratio ratio-16x9">
-        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" 
-                title="Robozinho em ação" 
-                allowfullscreen></iframe>
-      </div>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Robozinho em movimento</h5>
-        <p>Testes iniciais do projeto com sensores de movimento.</p>
+        <video src="../videos/v1.mp4" autoplay muted loop playsinline></video>
       </div>
     </div>
 
     <!-- Vídeo 2 -->
     <div class="carousel-item">
       <div class="ratio ratio-16x9">
-        <iframe src="https://www.youtube.com/embed/ysz5S6PUM-U" 
-                title="Robozinho IoT" 
-                allowfullscreen></iframe>
-      </div>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Controle via IoT</h5>
-        <p>Mostrando como o robô é controlado pelo celular.</p>
+        <video src="../videos/v2.mp4" autoplay muted loop playsinline></video>
       </div>
     </div>
 
     <!-- Vídeo 3 -->
     <div class="carousel-item">
       <div class="ratio ratio-16x9">
-        <iframe src="https://www.youtube.com/embed/aqz-KE-bpKQ" 
-                title="Robozinho com sensores" 
-                allowfullscreen></iframe>
-      </div>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Robozinho com sensores</h5>
-        <p>Funcionamento dos sensores em tempo real.</p>
+        <video src="../videos/v3.mp4" autoplay muted loop playsinline></video>
       </div>
     </div>
+
+    <!-- Vídeo 4 -->
+    <div class="carousel-item">
+      <div class="ratio ratio-16x9">
+        <video src="../videos/v4.mp4" autoplay muted loop playsinline></video>
+      </div>
+    </div>
+
+    <!-- Vídeo 5 -->
+    <div class="carousel-item">
+      <div class="ratio ratio-16x9">
+        <video src="../videos/v10.mp4" autoplay muted loop playsinline></video>
+      </div>
+    </div>
+
+    <!-- Vídeo 6 -->
+    <div class="carousel-item">
+      <div class="ratio ratio-16x9">
+        <video src="../videos/v12.mp4" autoplay muted loop playsinline></video>
+      </div>
+    </div>
+
   </div>
+</div>
+
+  
 
   <!-- Controles -->
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselVideos" data-bs-slide="prev">
@@ -81,47 +88,167 @@
   <h2 class="mb-4"><i class="bi bi-collection-play"></i> Outros vídeos</h2>
   <div class="row g-4">
 
-    <!-- Card 1 -->
-    <div class="col-md-6 col-lg-4">
-      <div class="card h-100 shadow-sm">
-        <div class="ratio ratio-16x9">
-          <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen></iframe>
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Teste com sensores</h5>
-          <p class="card-text">O robô desviando de obstáculos com sensores ultrassônicos.</p>
-          <p class="text-muted"><i class="bi bi-calendar-event"></i> 15/09/2025</p>
-        </div>
-      </div>
-    </div>
+  
+    <div class="row g-4">
 
-    <!-- Card 2 -->
-    <div class="col-md-6 col-lg-4">
-      <div class="card h-100 shadow-sm">
-        <div class="ratio ratio-16x9">
-          <iframe src="https://www.youtube.com/embed/ysz5S6PUM-U" allowfullscreen></iframe>
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Controle remoto via app</h5>
-          <p class="card-text">Apresentação do controle do robô através de aplicativo.</p>
-          <p class="text-muted"><i class="bi bi-calendar-event"></i> 10/09/2025</p>
-        </div>
+  <!-- Vídeo 1 -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100 shadow-sm">
+      <div class="ratio ratio-16x9">
+        <video src="../videos/v1.mp4" controls muted playsinline></video>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Teste com sensores</h5>
+        <p class="card-text">O robô desviando de obstáculos com sensores ultrassônicos.</p>
+        <p class="text-muted"><i class="bi bi-calendar-event"></i> 15/09/2025</p>
       </div>
     </div>
+  </div>
 
-    <!-- Card 3 -->
-    <div class="col-md-6 col-lg-4">
-      <div class="card h-100 shadow-sm">
-        <div class="ratio ratio-16x9">
-          <iframe src="https://www.youtube.com/embed/aqz-KE-bpKQ" allowfullscreen></iframe>
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Robozinho em competição</h5>
-          <p class="card-text">O robô participando de uma competição de velocidade.</p>
-          <p class="text-muted"><i class="bi bi-calendar-event"></i> 05/09/2025</p>
-        </div>
+  <!-- Vídeo 2 -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100 shadow-sm">
+      <div class="ratio ratio-16x9">
+        <video src="../videos/v2.mp4" controls muted playsinline></video>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Movimento básico</h5>
+        <p class="card-text">Demonstração do robô em movimento simples para frente e para trás.</p>
+        <p class="text-muted"><i class="bi bi-calendar-event"></i> 16/09/2025</p>
       </div>
     </div>
+  </div>
+
+  <!-- Vídeo 3 -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100 shadow-sm">
+      <div class="ratio ratio-16x9">
+        <video src="../videos/v3.mp4" controls muted playsinline></video>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Sensores IoT</h5>
+        <p class="card-text">Robô utilizando sensores conectados à plataforma IoT.</p>
+        <p class="text-muted"><i class="bi bi-calendar-event"></i> 17/09/2025</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vídeo 4 -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100 shadow-sm">
+      <div class="ratio ratio-16x9">
+        <video src="../videos/v4.mp4" controls muted playsinline></video>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Controle remoto</h5>
+        <p class="card-text">Controle do robô via aplicativo de celular.</p>
+        <p class="text-muted"><i class="bi bi-calendar-event"></i> 18/09/2025</p>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <!-- Vídeo 6 -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100 shadow-sm">
+      <div class="ratio ratio-16x9">
+        <video src="../videos/v6.mp4" controls muted playsinline></video>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Robô em pista</h5>
+        <p class="card-text">Teste do robô em pista com obstáculos variados.</p>
+        <p class="text-muted"><i class="bi bi-calendar-event"></i> 20/09/2025</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vídeo 7 -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100 shadow-sm">
+      <div class="ratio ratio-16x9">
+        <video src="../videos/v7.mp4" controls muted playsinline></video>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Robô com câmera</h5>
+        <p class="card-text">Visualização em tempo real com câmera acoplada.</p>
+        <p class="text-muted"><i class="bi bi-calendar-event"></i> 21/09/2025</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vídeo 8 -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100 shadow-sm">
+      <div class="ratio ratio-16x9">
+        <video src="../videos/v8.mp4" controls muted playsinline></video>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Teste de sensores</h5>
+        <p class="card-text">Comparativo de precisão entre sensores utilizados.</p>
+        <p class="text-muted"><i class="bi bi-calendar-event"></i> 22/09/2025</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vídeo 9 -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100 shadow-sm">
+      <div class="ratio ratio-16x9">
+        <video src="../videos/v9.mp4" controls muted playsinline></video>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Robô explorador</h5>
+        <p class="card-text">Robô utilizado em ambiente simulado de exploração.</p>
+        <p class="text-muted"><i class="bi bi-calendar-event"></i> 23/09/2025</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vídeo 10 -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100 shadow-sm">
+      <div class="ratio ratio-16x9">
+        <video src="../videos/v10.mp4" controls muted playsinline></video>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Robô seguidor de linha</h5>
+        <p class="card-text">Robô seguindo linha preta em pista branca.</p>
+        <p class="text-muted"><i class="bi bi-calendar-event"></i> 24/09/2025</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vídeo 11 -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100 shadow-sm">
+      <div class="ratio ratio-16x9">
+        <video src="../videos/v11.mp4" controls muted playsinline></video>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Comunicação sem fio</h5>
+        <p class="card-text">Robô controlado via comunicação Wi-Fi.</p>
+        <p class="text-muted"><i class="bi bi-calendar-event"></i> 25/09/2025</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vídeo 12 -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100 shadow-sm">
+      <div class="ratio ratio-16x9">
+        <video src="../videos/v12.mp4" controls muted playsinline></video>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Teste final</h5>
+        <p class="card-text">Apresentação final do projeto com todas as funções.</p>
+        <p class="text-muted"><i class="bi bi-calendar-event"></i> 26/09/2025</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
 
   </div>
 </main>
@@ -129,7 +256,7 @@
 
   <!-- Footer -->
   <footer-component></footer-component>
-
+  <script src="../js/videos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/b05eb750d3.js" crossorigin="anonymous"></script>
 
