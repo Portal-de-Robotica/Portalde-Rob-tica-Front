@@ -1,6 +1,82 @@
-/* =======================
-   Cards de vídeos aprimorados
-   ======================= */
+/* === Tema Escuro === */
+[data-bs-theme="dark"] body {
+  color: white !important;
+}
+
+.hero-section {
+    background: #0d6efd;
+    color: white;
+    padding: 50px 0;
+}
+
+/* Itens com fundo escuro e texto branco */
+[data-bs-theme="dark"] .card,
+[data-bs-theme="dark"] .news-card,
+[data-bs-theme="dark"] .sensor-card,
+[data-bs-theme="dark"] .search-box,
+[data-bs-theme="dark"] .sidebar-widget,
+[data-bs-theme="dark"] .alert-widget {
+  color: white !important;
+  border: 1px solid #495057 !important;
+}
+
+/* Campos de formulário */
+
+[data-bs-theme="dark"] .form-control::placeholder,
+[data-bs-theme="dark"] .text-muted,.card-body h5  {
+  color: #272b2e !important;
+}
+
+
+[data-bs-theme="dark"] .trending-news {
+  background: #dc3545 !important;
+}
+
+/* Badge clara no modo escuro */
+[data-bs-theme="dark"] .badge.bg-light {
+  background-color: #495057 !important;
+  color: white !important;
+}
+
+/* Botões outline */
+[data-bs-theme="dark"] .btn-outline-primary {
+  color: #0d6efd !important;
+  border-color: #0d6efd !important;
+}
+[data-bs-theme="dark"] .btn-outline-success {
+  color: #198754 !important;
+  border-color: #198754 !important;
+}
+[data-bs-theme="dark"] .btn-outline-danger {
+  color: #dc3545 !important;
+  border-color: #dc3545 !important;
+}
+[data-bs-theme="dark"] .btn-outline-warning {
+  color: #ffc107 !important;
+  border-color: #ffc107 !important;
+}
+
+/* Carrossel modo escuro */
+[data-bs-theme="dark"] .carousel-inner {
+  background-color: #1b1c1d !important;
+}
+
+/* === Tema Claro === */
+[data-bs-theme="light"] body {
+  background-color: #dddddd !important;
+}
+
+[data-bs-theme="light"] .carousel-inner {
+  background-color: #c0c3c9 !important;
+}
+
+[data-bs-theme="light"] .card {
+  background-color: #c7c3c3 !important;
+  color: black !important;
+  border: 1px solid #dee2e6 !important;
+}
+
+/* === Estilo base para cards (ambos temas) === */
 .card {
   background-color: #fff;
   color: #212529;
@@ -15,7 +91,6 @@
   box-shadow: 0 12px 28px rgba(0,0,0,0.18);
 }
 
-/* Corpo do card */
 .card-body h5 {
   font-weight: 600;
   font-size: 1.1rem;
@@ -32,7 +107,6 @@
   font-size: 0.85rem;
 }
 
-/* Vídeo dentro do card */
 .card .ratio {
   overflow: hidden;
 }
@@ -40,7 +114,7 @@
 .card video {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Mantém proporção 16:9 sem distorcer */
+  object-fit: cover;
   transition: transform 0.3s ease;
 }
 
@@ -48,26 +122,27 @@
   transform: scale(1.03);
 }
 
-[data-bs-theme="light"] body {
-  background-color: #dddddd !important; 
-}
-[data-bs-theme="light"] .carousel-inner {
-  background-color: #c0c3c9 !important; 
-}
-[data-bs-theme="dark"] .carousel-inner {
-  background-color: #1b1c1d !important; 
-}
-
-[data-bs-theme="dark"] .card {
-  background-color: #212529 !important; 
-  color: white !important;
-  border: 1px solid #495057 !important;
+/* === Controles do carrossel === */
+.carousel-control-prev,
+.carousel-control-next {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-[data-bs-theme="light"] .card{
-  background-color: #c7c3c3 !important; 
-  color: #000000 !important;
-  border: 1px solid #dee2e6 !important;
-  color: #000000;
-}
+.carousel-control-prev { left: 10px; }
+.carousel-control-next { right: 10px; }
 
+/* Responsivo: reduz controles em telas menores */
+@media (max-width: 768px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 40px;
+    height: 40px;
+  }
+  .carousel-control-prev { left: 5px; }
+  .carousel-control-next { right: 5px; }
+}
