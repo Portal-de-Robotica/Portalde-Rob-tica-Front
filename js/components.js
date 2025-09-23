@@ -103,23 +103,23 @@ footerTemplate.innerHTML = `
 
                
         <a href="https://www.facebook.com/Binhoabreu182" target="_blank">
-        <i class="bi bi-facebook gap-5 fs-4 ms-3"></i>
+        <i class="bi bi-facebook gap-5 fs-4 text-white ms-3"></i>
         </a>
                       
         <a href="https://wa.me/554898661407" target="_blank">
-        <i class="bi bi-whatsapp ms-1 fs-4"></i>
+        <i class="bi bi-whatsapp ms-1 fs-4 text-white"></i>
         </a>
 
         <a href="https://instagram.com/smrasouza" target="_blank">
-        <i class="bi bi-instagram ms-1 fs-4"></i>
+        <i class="bi bi-instagram ms-1 fs-4 text-white"></i>
         </a>
 
         <a href="https://github.com/Portal-de-Robotica/Portalde-Rob-tica-Front" target="_blank">
-        <i class="bi bi-github ms-1 fs-4 "></i>
+        <i class="bi bi-github ms-1 fs-4 text-white"></i>
         </a>
 
         <a href="mailto:jaderbf03@gmail.com" target="_blank">
-        <i class="bi bi-envelope ms-1 fs-4 "></i>
+        <i class="bi bi-envelope ms-1 fs-4 text-white"></i>
         </a>
 
       
