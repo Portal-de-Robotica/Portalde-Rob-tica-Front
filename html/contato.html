@@ -90,7 +90,39 @@
 
       </div>
     </div>
-  </main>
+    </main>
+    
+    <div class="container mt-5">
+    <h2 class="mb-4">Fale Conosco</h2>
+
+    <form id="form-contato" novalidate>
+
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="nome" required>
+        <div class="invalid-feedback">Por favor, insira seu nome.</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">E-mail</label>
+        <input type="email" class="form-control" id="email" required>
+        <div class="invalid-feedback">Por favor, insira um e-mail válido.</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="mensagem" class="form-label">Mensagem</label>
+        <textarea class="form-control" id="mensagem" rows="5" required></textarea>
+        <div class="invalid-feedback">Por favor, escreva uma mensagem.</div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+
+    <div id="mensagem-sucesso" class="alert alert-success mt-4 d-none" role="alert">
+      Mensagem enviada com sucesso! Entraremos em contato em breve.
+    </div>
+  </div>
+
 
   <footer-component></footer-component>
 
